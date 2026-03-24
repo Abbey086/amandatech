@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Amanda Technologies, Website Design and Graphics</title>
-    <meta role="description" content="Website developer in Uganda, Kampala for affordable and professional website design and development and grahics design"
+    <title> About Amanda Technologies, Website Design and Graphics</title>
+    <meta role="description" content="Website developer in Uganda, Kampala for affordable and professional website design and development and grahics design">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300..700&family=Special+Gothic+Expanded+One&display=swap"
       rel="stylesheet"
@@ -25,8 +26,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="3.4.js"></script>
-    
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
     <style>
@@ -35,22 +35,17 @@
       }
 
       body {
-        overflow: hidden;
         background: #f9fafb;
-        max-height: 100dvh;
-        width: 100px;
       }
 
       .panel {
         position: absolute;
         width: 100%;
-        height: 100dvh;
-        max-height: 100dvh;
+        height: 100vh;
         top: 0;
         left: 0;
         display: grid;
         place-items: center;
-        overflow-x: hidden;
         opacity: 0;
         pointer-events: none;
       }
@@ -64,6 +59,9 @@
         overflow: hidden;
         padding-block: 70px 20px;
       }
+      .reveal-mask.ccx {
+        padding-block: 30px;
+      }
       .reveal-mask.np {
         padding-block: 0;
       }
@@ -74,11 +72,6 @@
         text-align: center;
         font-weight: 800;
         line-height: 1.2;
-      }
-      @media screen and (max-width: 490px) {
-        .spring-heading{
-          font-size: 2.8rem;
-        }
       }
       .spring-heading span {
         font-family: "Special Gothic Expanded One", sans-serif;
@@ -122,6 +115,12 @@
         animation: levitate-r 4s ease-in-out infinite;
         transform-origin: center;
       }
+      .d-2 {
+        animation-delay: 2000ms;
+      }
+      .d-3 {
+        animation-delay: 3s;
+      }
 
       .section-nav {
         position: fixed;
@@ -145,51 +144,35 @@
         border-radius: 50%;
         font-size: 18px;
       }
-
-/* MOBILE ONLY — does not touch desktop */
-@media (max-width: 768px) {
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: auto;
-    overflow-y: auto;
+      @media (max-width: 768px) {
+  html{
+    overflow-y: scroll;
     scroll-snap-type: y mandatory;
   }
-
-  body {
-    display: block !important; /* kill flex interference */
+  body{
+    display: flex;
+    flex-direction: column;
   }
-
-  .panel {
-    position: relative !important;  /* restore flow */
-    height: 100vh;
-    width: 100vw;
-    scroll-snap-align: start;
-    opacity: 1 !important;
-    pointer-events: auto !important;
+  .panel{
+    position: relative;
+    scroll-snap-align: center;
+    opacity: 1;
+    pointer-events: auto;
   }
-  .floating-click{
-    position: absolute;
-  }
-  .section-nav{
+  .section-nav, .iuh{
     display: none;
-  }
-
-  /* Footer should behave like a normal section */
-  #footer {
-    position: relative !important;
-    scroll-snap-align: start;
-    margin-top: 0;
   }
 }
     </style>
   </head>
 
-  <body class="snap-y w-screen snap-mandatory">
-    <nav
+  <body>
+      <nav
       class="fixed bg-white z-[3456] bottom-0 py-4 w-screen left-0 px-4 md:px-16 flex justify-between items-center"
     >
       <svg
+          onclick="window.location.href='index.html'"
+
         class="fill-black hover:fill-sky-400 transition md:w-12 md:h-12 w-9 h-9"
         fill="black"
         xmlns="http://www.w3.org/2000/svg"
@@ -250,295 +233,137 @@
 
     <!-- SECTIONS -->
 
-    <section  class="panel snap-center active">
-      <header class="text-center absolute top-5 md:top-9">AMANDA TECHNOLOGIES</header>
-      <div class="reveal-mask -mt-24 md:-mt-12">
-        <h1 class="spring-heading ">
-          You need a <span class="bg-sky-4000">website</span>,<br />Don't you?
+    <section class="panel snap-center active">
+      <header class="text-center absolute top-9">
+        AMANDA TECHNOLOGIES
+        <span
+          class="block w-auto mx-auto bg-sky-100 border-sky-600 border mt-4 text-sm text-sky-700 rounded-full py-1"
+          >About Us</span
+        >
+      </header>
+      <div class="reveal-mask">
+        <h1 class="spring-heading mt-0 md:-mt-9 text-4xl md:text-7xl">
+          Based in <span class="bg-sky-4000">Uganda</span> since
+          <span class="bg-sky-4000">2024</span>
         </h1>
+        <p class="mx-auto w-11/12 md:w-4/6 md:mt-9 md:text-xl text-center">
+         We blend expert web development with high-impact graphic design to scale your brand. Our data-driven strategies and professional copywriting ensure your digital presence achieves maximum engagement and high-conversion results.
+        </p>
       </div>
       <img
-        src="props/rocket.png"
-        class="animate-levitate fixed bottom-8 md:top-1/2 left-16 w-56 md:w-72"
+        src="props/click3.png"
+        class="fixed iuh floating-click w-24 md:w-48 top-0 left-0 z-10"
       />
     </section>
 
-    <section class="panel snap-center px-3 md:px-0">
-      <header class="text-center absolute top-9">AMANDA TECHNOLOGIES</header>
-      <img
-        src="props/click2.png"
-        class="fixed floating-click w-24 md:w-48 top-0 left-0 z-10"
-      />
-      <div class="reveal-mask -mt-24 md:-mt-12">
-        <h1 class="spring-heading">
-          We build <span class="bg-sky-4000">websites</span> and design
-          <span class="bg-sky-4000">graphics</span> for
-          <span class="bg-sky-4000">your</span> business
-        </h1>
-      </div>
-    </section>
-
-    <section class="panel snap-center flex flex-col justify-start">
+    <section class="panel snap-center bg-sky-600 text-white flex flex-col justify-start">
       <header class="text-center absolute top-9">AMANDA TECHNOLOGIES</header>
 
       <div class="mt-6 reveal-mask">
         <h1 class="spring-heading text-3xl md:text-6xl">
-          Our <span class="text-sky-500">Creative</span> Process
+          Men <span class="text-black">behind</span> her
         </h1>
       </div>
-      <p class="text-sm md:hidden text-gray-600">👇Click on the numbers below to explore👇</p>
-      <img
-        src="props/click.png"
-        class="fixed floating-click w-12 md:w-48 top-0 left-0 z-10"
-      />
 
-      <div
-      id="ocp"
-        class="bg-sky-500 md:mt-44 mt-6 w-4/5 h-3 md:h-6 flex  justify-between px-0 md:px-16 items-center rounded-full md:static relative mx-auto"
-      >
-      <span class="w-full transition-colors duration-[9000] rounded-full absolute md:hidden bg-gradient-to-r from-sky-500 to-0% to-sky-200 from-0% left-0 h-3"></span>
+      <div class="flex justify-between md:flex-row flex-col px-2 md:px-20 w-full">
         <div
-        onclick="showCP(1)"
-          class="h-9 w-9 rounded-full border-4 border-white bg-sky-500 md:relative"
+          id="founder1"
+          class="animate-levitate w-[40vw] h-[40vw] md:w-48 md:h-48 aspect-square rounded-full md:hover:w-56 md:hover:h-56 transition relative md:-bottom-24 bg-white"
         >
-        <span class="absolute w-full top-1/2 transform font-bold -translate-y-1/2 md:hidden text-center">1</span>
-          <div class="w-[80vw] opacity-0 md:opacity-100 md:w-64 absolute group md:text-center left-0 md:-left-24 -ml-4 top-12">
-            <img
-              src="props/cc1.jpg"
-              class="w-52 group-hover:opacity-100 md:opacity-20 transition group-hover:-top-48 object-cover h-32 left-6 rounded-2xl md:absolute -top-48"
-            />
-            <div class="reveal-mask np">
-              <h1 class="spring-heading text-2xl text-left md:text-center">Vision Analysis</h1>
-            </div>
-
-            <p>
-              We identify your core objectives to build a powerful foundation for all creative assets.
-            </p>
-          </div>
-        </div>
-        <div
-        onclick="showCP(2)"
-          class="h-9 w-9 rounded-full border-4 border-black bg-white relative"
-        >
-        <span class="absolute w-full top-1/2 transform font-bold -translate-y-1/2 md:hidden text-center">2</span>
-          <div
-            class="md:w-64 w-[80vw] pointer-events-none opacity-0 md:-top-[450%] md:opacity-100 absolute group text-left md:text-center -left-[40vw] md:-left-24 flex md:inline flex-col-reverse md:-ml-4 ml-4 transform md:ro,tate-180 origin-top"
-          >
-            <p class="">
-              Our team develops high-conversion digital solutions tailored to your specific brand identity and goals.
-            </p>
-            <div class="reveal-mask np">
-              <h1 class="spring-heading text-left text-2xl">Expert Execution</h1>
-            </div>
-            <img
-              src="props/cc2.jpg"
-              class="w-52 group-hover:opacity-100 opacity-100 transition group-hover:-top-48 object-cover h-32 left-6 rounded-2xl mt-10 md:mt-0 md:absolute md:top-44"
-            />
-          </div>
-        </div>
-        <div
-        onclick="showCP(3)"
-          class=" h-9 w-9 rounded-full border-4 border-black bg-white static md:relative"
-        >
-        <span class="absolute w-full top-1/2 transform font-bold -translate-y-1/2 md:hidden text-center">3</span>
-          <div class="w-[80vw] opacity-0 md:opacity-100  md:w-64 absolute group md:text-center ml-12 -left-[80vw] md:-left-24 md:-ml-4 top-10">
-            <img
-              src="props/cc3.jpg"
-              class="w-52 group-hover:opacity-100 md:opacity-100 transition group-hover:-top-48 object-cover h-32 left-6 rounded-2xl md:absolute -top-48"
-            />
-            <div class="reveal-mask np">
-              <h1 class="spring-heading text-2xl text-left md:text-center">Strategic Launch</h1>
-            </div>
-
-            <p>
-              We deploy your project with optimized marketing strategies to ensure maximum visibility and engagement.
-            </p>
-            <button>prev</button>
-          </div>
+          <img
+            src="props/ronnie.jpeg"
+            class="w-full h-full rounded-full object-cover"
+          />
+          <h2 class="absolute w-full text-center font-bold text-base md:text-xl -bottom-8">
+            Kisakye Ronnie
+          </h2>
         </div>
 
+        <div
+          id="founder2"
+          class="w-[40vw] h-[40vw] md:w-48 md:h-48 aspect-square rounded-full md:hover:w-56 md:hover:h-56 transition relative md:left-0 left-[55vw] bg-white"
+        >
+          <img
+            src="props/abbey.jpeg"
+            class="w-full h-full rounded-full object-cover"
+          />
+          <h2 class="absolute w-full text-center font-bold text-base md:text-xl line-clamp-1 md:line-clamp-none -bottom-8">
+            Mukiibi Abbey Joel
+          </h2>
+        </div>
+
+        <div
+          id="founder3"
+          class="animate-levitate w-[40vw] h-[40vw] md:w-48 md:h-48 aspect-square rounded-full md:hover:w-56 md:hover:h-56 transition relative md:-bottom-24 bg-white"
+        >
+          <img
+            src="props/kato.png"
+            class="w-full h-full rounded-full object-cover"
+          />
+          <h2 class="absolute w-full text-center font-bold text-base md:text-xl -bottom-7 md:-bottom-8">
+            Kato Solomon
+          </h2>
+        </div>
       </div>
-
       <script>
-        function showCP(x){
-  const cps = document.querySelectorAll('#ocp > div > div');
-  for(let i = 0; i < cps.length; i++){
-    cps[i].classList.add('opacity-0');
-    cps[i].classList.remove('opacity-100');
-    cps[i].parentElement.classList.add('border-white')
-    cps[i].parentElement.classList.add('bg-sky-500');
-    cps[i].parentElement.classList.remove('bg-white'); 
-    cps[i].parentElement.classList.remove('border-black')
+        window.addEventListener("load", () => {
+          const f1 = document.getElementById("founder1");
+          const f2 = document.getElementById("founder2");
+          const f3 = document.getElementById("founder3");
+
+          const line1 = new LeaderLine(f1, f2, {
+            color: "white",
+            size: 4,
+            startPlug: "disc",
+            path: "straight",
+            endPlug: "disc",
+          });
+
+          const line2 = new LeaderLine(f3, f2, {
+            color: "white",
+            path: "straight",
+            size: 4,
+            startPlug: "disc",
+            endPlug: "disc",
+          });
+function update() {
+  const secondPanel = document.querySelectorAll(".panel")[1];
+  const rect = secondPanel.getBoundingClientRect();
+
+  const inView =
+    rect.top < window.innerHeight * 0.6 &&
+    rect.bottom > window.innerHeight * 0.4;
+
+  if (inView) {
+    line1.show();
+    line2.show();
+    line1.position();
+    line2.position();
+  } else {
+    line1.hide();
+    line2.hide();
   }
-  
-  const active = cps[x-1];
-  active.parentElement.classList.remove('border-white')
-  active.parentElement.classList.remove('bg-sky-500');
-  active.parentElement.classList.add('bg-white'); 
-  active.parentElement.classList.add('border-black')
-  active.classList.remove('opacity-0');
-  active.classList.add('opacity-100');
 
-  // only target elements inside the active panel
-  const texts = active.querySelectorAll('.reveal-mask, p');
-  const img = active.querySelectorAll('img');
-
-  gsap.fromTo(texts,
-    { y: 40, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.6, stagger: 0.12, ease: "power2.out" }
-  );
-  gsap.fromTo(img,
-    { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.6, stagger: 0.12, ease: "power2.out" }
-  );
-} 
-        showCP(1);
-        var ct = 1;
-        setInterval(function (){
-         ct = ct==3 ? 1 : ct+1
-          showCP(ct)
-        },6000)
-
-        document.querySelector('#ocp > span').classList.add("to-100%")
-        document.querySelector('#ocp > span').classList.add("from-100%")
-      
+  requestAnimationFrame(update);
+}
+          update();
+        });
       </script>
-    </section>
 
-<section data-else="services" class="panel snap-center flex flex-col gap-9 md:gap-5 md:justify-start justify-center w-full overflow-hidden">
-  <div class="reveal-mask">
-    <header class="text-center w-full left-0 absolute top-9">
-      AMANDA TECHNOLOGIES
-    </header>
-    <h1 class="spring-heading text-4xl md:text-6xl">
-      <span class="text-sky-400">Ideas</span> come in many shapes!<br />
-      <i class="text-2xl md:text-6xl relative md:static -top-1 not-italic">We have them <span class="text-sky-400">all</span></i>
-    </h1>
-  </div>
-
-  <div class="flex w-full md:justify-center px-6 pb-12 gap-9 -mt-8 md:gap-20 md:overflow-visible overflow-x-auto snap-x snap-mandatory">
-    
-    <div class="w-64 shrink-0 snap-center flex justify-center">
-      <div class="bg-sky-500 w-full scale-90 md:scale-75 scard transition-all duration-300 hover:rotate-0 md:hover:scale-100 rotate-0 md:rotate-12 relative p-5 rounded-xl text-white">
-        <h2 class="font-bold text-3xl">Website Design</h2>
-        <img class="h-48 absolute -top-1.5 md:hover:scale-125 transition -right-24" src="props/click2.png" />
-        <p class="font-semibold mt-32">
-          Do you have an organisation or a business? We are ready to build your brand image online
-        </p>
-      </div>
-    </div>
-
-    <div class="w-64 shrink-0 snap-center flex justify-center">
-      <div class="bg-sky-500 w-full scale-90 md:scale-75 scard transition-all duration-300 hover:rotate-0 md:hover:scale-100 rotate-0 md:-rotate-12 relative py-2 px-5 rounded-xl text-white">
-        <h2 class="font-bold text-3xl">Graphics Design</h2>
-        <img class="h-48 absolute top-2 md:-top-1.5 md:hover:scale-125 transition -right-12 md:-right-24" src="props/click.png" />
-        <p class="font-semibold mt-32">
-          Want to make your brand visually stunning? We create designs that communicate your story online.
-        </p>
-      </div>
-    </div>
-
-    <div class="w-64 shrink-0 snap-center flex justify-center">
-      <div class="bg-sky-500 w-full scale-90 md:scale-75 scard transition-all duration-300 hover:rotate-0 md:hover:scale-100 rotate-0 md:rotate-12 relative p-5 rounded-xl text-white">
-        <h2 class="font-bold text-3xl">Custom Software</h2>
-        <img class="h-48 absolute -top-1.5 -right-24 md:hover:scale-125 transition" src="props/clcik6.png" />
-        <p class="font-semibold mt-24">
-          Need software tailored to your business? We build custom solutions to automate & streamline operations.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-    <section class="panel snap-center flex flex-col justify-start">
-      <header class="text-center absolute top-9">AMANDA TECHNOLOGIES</header>
-      <div class="reveal-mask">
-        <h1 class="spring-heading text-4xl md:text-6xl">
-          We prefer <span class="text-sky-400">actions</span> <br />
-          to words
-        </h1>
-      </div>
-      <div
-        class="relative project-cards snap-y snap-mandatory space-y-3 px-2 md:px-0 md:flex md:ml-48 overflow-y-scroll md:overflow-visible md:mt-12 items-center h-1/2 md:h-40 gap-0"
-      >
-        <!-- Card 1 -->
-        <div
-          class="h-auto pb-6 md:pb-0 md:h-40 w-full snap-start md:w-64 rounded-xl overflow-hidden relative md:-translate-x-0 hover:rotate-0 md:hover:scale-125 hover:z-50 transition-transform duration-500 md:-rotate-12"
-        >
-          <img src="props/kisaasi.png" class="w-full h-full" />
-          <div
-            class="bg-sky-500 absolute h-auto md:h-full bottom-0 inset-x-0 md:inset-0 flex flex-col justify-center items-center text-center text-white md:opacity-0 hover:opacity-100 transition-opacity duration-300"
-          >
-            <b class="font-bold">Kisaasi College School</b>
-            <a href="#" class="hover:underline hidden md:inline hidden md:inline">Learn More</a>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div
-          class="h-auto pb-6 md:pb-0 md:h-40 w-full snap-start md:w-64 rounded-xl overflow-hidden relative md:-translate-x-0 hover:rotate-0 md:hover:scale-125 hover:z-50 transition-transform duration-500 md:-rotate-12"
-     >
-          <img src="props/aleph.png" class="w-full h-full" />
-          <div
-            class="bg-sky-500 absolute h-auto md:h-full bottom-0 inset-x-0 md:inset-0 flex flex-col justify-center items-center text-center text-white md:opacity-0 hover:opacity-100 transition-opacity duration-300"
-          >
-            <b class="font-bold">Aleph Junior School</b>
-            <a href="work.html" class="hover:underline hidden md:inline">Learn More</a>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div
-          class="h-auto pb-6 md:pb-0 md:h-40 w-full snap-start md:w-64 rounded-xl overflow-hidden relative md:-translate-x-0 hover:rotate-0 md:hover:scale-125 hover:z-50 transition-transform duration-500 md:-rotate-12"
-        >
-          <img src="props/inovi.png" class="w-full h-full" />
-          <div
-            class="bg-sky-500 absolute h-auto md:h-full bottom-0 inset-x-0 md:inset-0 flex flex-col justify-center items-center text-center text-white md:opacity-0 hover:opacity-100 transition-opacity duration-300"
-          >
-            <b class="font-bold">Inovi Store</b>
-            <a href="work.html" class="hover:underline hidden md:inline">Learn More</a>
-          </div>
-        </div>
-
-        <div
-          class="h-auto pb-6 md:pb-0 md:h-40 w-full snap-start md:w-64 rounded-xl overflow-hidden relative md:-translate-x-0 hover:rotate-0 md:hover:scale-125 hover:z-50 transition-transform duration-500 md:-rotate-12"
-        >
-          <img src="props/tta.png" class="w-full h-full" />
-          <div
-            class="bg-sky-500 absolute h-auto md:h-full bottom-0 inset-x-0 md:inset-0 flex flex-col justify-center items-center text-center text-white md:opacity-0 hover:opacity-100 transition-opacity duration-300"
-          >
-            <b class="font-bold">Tours Management App</b>
-            <a href="work.html" class="hover:underline hidden md:inline">Learn More</a>
-          </div>
-        </div>
-
-        <!-- Last card (See More) -->
-        <div
-          class="pb-6 md:pb-0 h-48 md:h-40 w-full snap-start md:w-64 rounded-xl md:overflow-hidden relative md:-translate-x-0 hover:rotate-0 md:hover:scale-125 hover:z-50 transition-transform duration-500 md:-rotate-12"
-        >
-          <div
-            class="bg-sky-500 h-full rounded-xl md:absolute inset-0 flex flex-col justify-center items-center text-center text-white opacity-100 transition-opacity duration-300"
-          >
-            <b class="font-bold">All Projects?</b>
-            <a href="/work" class="hover:underline">See More</a>
-          </div>
-        </div>
-      </div>
       <img
-        src="props/click5.png"
-        class="fixed floating-click w-48 top-0 left-0 z-10"
+        src="props/click4.png"
+        class="fixed floating-click w-20 md:w-48 top-0 left-0 z-10"
       />
     </section>
 
-    <section id="contact" class="panel snap-center flex justify-start flex-col">
+    <section class="panel snap-center flex justify-start flex-col">
       <header class="text-center absolute top-9">AMANDA TECHNOLOGIES</header>
       <div class="reveal-mask mt-24">
-        <h1 class="spring-heading leading-tight">
+        <h1 class="spring-heading leading-tight text-5xl md:text-7xl">
           Talk to <span class="text-sky-500">Us</span>!
         </h1>
       </div>
-      <form method="post" action="https://formsubmit.co/amandatechnologies@gmail.com" class="grid relative w-5/6 gap-2 md:gap-5 grid-cols-8 md:grid-cols-9 md:grid-rows-2 grid-rows-3">
+  <form method="post" action="https://formsubmit.co/amandatechnologies@gmail.com" class="grid relative w-5/6 gap-2 md:gap-5 grid-cols-8 md:grid-cols-9 md:grid-rows-2 grid-rows-3">
         <input type="hidden" name="_next" value="https://amandatechnologies.com/thanks">
         <input type="hidden" name="_captcha" value="false">
         <input
@@ -567,11 +392,9 @@
         />
       </form>
     </section>
-   
-    
-       <section class="panel flex relative items-center justify-center snap-center">
+    <section class="panel snap-center">
       <div class="reveal-mask">
-        <h1 class="spring-heading md:static absolute top-4 text-5xl md:text-7xl">
+        <h1 class="spring-heading text-5xl md:text-7xl">
           Copyright &copy; <span>2026</span>.<br />
           All rights reserved.
         </h1>
@@ -634,8 +457,8 @@
       </div>
     </section>
 
+
     <script>
-      const isMobile = window.innerWidth <= 768;
       const links = document.querySelectorAll(".nav-link");
       const indicator = document.getElementById("indicator");
 
@@ -656,6 +479,7 @@
       document.getElementById("nav").addEventListener("mouseleave", () => {
         indicator.classList.add("opacity-0");
       });
+
       function splitText(element) {
         function processNode(node) {
           if (node.nodeType === 3) {
@@ -768,10 +592,6 @@
       const id = params.get("contact");
       if (id) {
         showSection(5);
-        if(isMobile){
-          document.body.scrollTo(0, document.body.scrollHeight - (window.innerHeight*2));
-           
-        }
       }
 
       function animateFlyIn(i) {
@@ -797,8 +617,6 @@
               }
             }
 
-            rocket.style.transform = `translateY(${y}px)`;
-
             if (velocity !== 0 || y < floor) {
               requestAnimationFrame(animateQ);
             }
@@ -807,9 +625,12 @@
           animateQ();
         }
         if (i == 2) {
-          const bar = document.querySelector(".bg-sky-500");
+         const bar = panels[i]?.querySelector(".bg-sky-500");
+         if (!bar) return;
           const nodes = bar.querySelectorAll(".h-9");
           const texts = bar.querySelectorAll(".reveal-mask, p");
+
+          if (!texts.length) return;
 
           gsap.set(bar, {
             transformOrigin: "left",
@@ -925,6 +746,7 @@
           showSection(current - 1);
         }
       });
+      
 
       window.addEventListener("keydown", (e) => {
         if (e.key === "ArrowDown") showSection(current + 1);
@@ -978,115 +800,28 @@
         });
       });
 
-      // Mobile-only detection
+      const isMobile = window.innerWidth <= 768;
 
 if (isMobile) {
   const panels = document.querySelectorAll(".panel");
 
-  const observerOptions = {
-    root: null, // use the viewport
-    threshold: 0.5 // trigger when 50% of the panel is visible
-  };
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = [...panels].indexOf(entry.target);
+          animateFlyIn(index);
+        }
+      });
+    },
+    {
+      threshold: 0.6, // trigger when 60% visible
+    }
+  );
 
-  const mobileObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const panel = entry.target;
-      const index = Array.from(panels).indexOf(panel);
-      const heading = panel.querySelector('.spring-heading');
-      
-      // Select only the floating props INSIDE this specific panel
-      const localProps = panel.querySelectorAll('.floating-click, img[src="props/rocket.png"]');
-
-      if (entry.isIntersecting) {
-        // 1. Reveal the heading text
-        if (heading) springTextIn(heading);
-
-        // 2. Show floating props for THIS panel only
-        localProps.forEach(prop => {
-          gsap.to(prop, { opacity: 1, duration: 0.4 });
-          prop.style.pointerEvents = "auto";
-        });
-
-        // 3. Trigger the specific internal animations (Rocket drop, cards, etc.)
-        // Using your existing logic but scoped to this index
-        triggerMobilePanelAnimations(panel, index);
-
-      } else {
-        // 1. Hide the heading when it leaves
-        if (heading) springTextOut(heading);
-
-        // 2. Hide floating props so they don't overlay other sections
-        localProps.forEach(prop => {
-          gsap.to(prop, { opacity: 0, duration: 0.3 });
-          prop.style.pointerEvents = "none";
-        });
-
-        // Reset animation state so it can replay if they scroll back up
-        panel.dataset.animated = "false";
-      }
-    });
-  }, observerOptions);
-
-  // Start observing all panels for mobile
-  panels.forEach((panel) => mobileObserver.observe(panel));
+  panels.forEach((panel) => observer.observe(panel));
 }
 
-/**
- * Handles the specific constituent animations for each panel on mobile
- */
-function triggerMobilePanelAnimations(panel, i) {
-  // Prevent double-triggering if already visible
-  if (panel.dataset.animated === "true") return;
-  panel.dataset.animated = "true";
-
-  // PANEL 0: Rocket Drop Physics
-  if (i === 0) {
-    const rocket = panel.querySelector('img[src="props/rocket.png"]');
-    if (rocket) {
-      let y = -400, velocity = 2, gravity = 0.6;
-      const floor = window.innerHeight / 2;
-      function bounce() {
-        velocity += gravity; y += velocity;
-        if (y >= floor) { y = floor; velocity *= -0.35; }
-        rocket.style.transform = `translateY(${y}px)`;
-        if (Math.abs(velocity) > 0.1 || y < floor) requestAnimationFrame(bounce);
-      }
-      bounce();
-    }
-  }
-
-  // PANEL 2: GSAP Creative Process Bar
-  if (i === 2) {
-    const bar = panel.querySelector(".bg-sky-500");
-    if (bar) {
-      gsap.fromTo(bar, { scaleX: 0 }, { scaleX: 1, duration: 1, ease: "power3.out", transformOrigin: "left" });
-      gsap.fromTo(bar.querySelectorAll(".h-9"), { scale: 0 }, { scale: 1, duration: 0.5, stagger: 0.2 });
-    }
-  }
-
-  // PANEL 3: Service Cards (.scard) Bounce
-  if (i === 3) {
-    panel.querySelectorAll(".scard").forEach((card, idx) => {
-      card.style.top = "400px";
-      setTimeout(() => {
-        card.animate(
-          [{ top: "400px" }, { top: "-20px" }, { top: "0px" }],
-          { duration: 800, easing: "ease-out", fill: "forwards" }
-        );
-      }, idx * 150);
-    });
-  }
-
-  // PANEL 4: Project Cards Slide
-  if (i === 4) {
-    panel.querySelectorAll(".project-cards > *").forEach((card, idx) => {
-      card.animate(
-        [{ left: "-100%", opacity: 0 }, { left: "0%", opacity: 1 }],
-        { duration: 600, delay: idx * 200, easing: "ease-out", fill: "forwards" }
-      );
-    });
-  }
-}
     </script>
   </body>
 </html>
