@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy April Fool's Day</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+
+    
+    <h2 id="rdc" class="mt-6 text-4xl md:text-5xl font-bold">
+        Amanda Digital BackLib
+    </h2>
+    <img src="kijh.jpg" alt="BackLib Device" class="mt-10 w-[70%] max-w-sm">
+
+    <p class="mt-4 text-gray-500 max-w-lg" id="rdck">
+      One device. 1000 books. Zero distractions. Infinite dreams.
+    </p>
+
+    <button class="mt-8 px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
+      Buy Now – UGX 350,000
+    </button>
+
+    <p class="mt-3 text-sm text-gray-400">
+      *Delivery in 2075. Maybe.
+    </p>
+  </section>
+
+  <!-- INTERACTIVE BOX -->
+  <section class="py-24 bg-gray-100 text-center px-6">
+    <h2 class="text-3xl font-semibold">
+      Be honest with yourself
+    </h2>
+
+    <p class="mt-4 text-gray-600">
+      How would you actually feel if this was real?
+    </p>
+<form action="https://formsubmit.co/amandatechnologies@gmail.com" method="post">
+    <textarea 
+      placeholder="Type your answer here..."
+      name="Message"
+      class="mt-6 w-full max-w-xl h-40 p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black resize-none"
+    ></textarea>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://amandatechnologies.com/backlib">
+<br>
+    <button class="mt-6 px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800">
+      Submit (we won’t read it…)
+    </button>
+</form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-gray-400 text-sm">
+    Amanda Technologies • Built for dreams, not reality.
+  </footer>
+<script>
+    var cx = document.getElementById('rdc');
+    setTimeout(() => {
+        cx.innerHTML = "Happy April Fool's Day"
+         document.getElementById('rdck').innerText = "We are sorry! Did you really need it?"
+    }, 2000);
+    </script>
+</body>
+</html>
