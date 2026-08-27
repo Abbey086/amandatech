@@ -279,10 +279,12 @@ const H = {
       const e = this.elements.scroller.querySelector(".progress_bar"),
         t = this.elements.scroller.querySelector(".index_current"),
         i = this.elements.scroller.querySelectorAll(".main_item");
+
       if (!e || !t || i.length === 0) {
         this.log("Scroller elements not found");
         return;
       }
+
       const a = i.length,
         {
           transitionGap: h,
@@ -292,24 +294,27 @@ const H = {
           scrollAmount: g,
           scrollDistancePerItem: b,
         } = this.options;
-      (gsap.set(i[0], { autoAlpha: 1 }),
-        i.forEach((o, s) => {
-          s > 0 && gsap.set(o, { autoAlpha: 0 });
-        }),
-        (this.splitTexts = []),
-        i.forEach((o, s) => {
-          const n = o.querySelector("p");
-          if (n) {
-            const c = new SplitText(n, {
-              type: "lines, chars",
-              linesClass: "line",
-              charsClass: "char",
-              mask: "lines",
-              aria: !1,
-            });
-            ((this.splitTexts[s] = c), gsap.set(c.chars, { opacity: r }));
-          }
-        }));
+
+      gsap.set(i[0], { autoAlpha: 1 });
+      i.forEach((o, s) => {
+        s > 0 && gsap.set(o, { autoAlpha: 0 });
+      });
+
+      this.splitTexts = [];
+      i.forEach((o, s) => {
+        const n = o.querySelector("p");
+        if (n) {
+          const c = new SplitText(n, {
+            type: "lines",
+            linesClass: "line",
+            mask: "lines",
+            aria: !1,
+          });
+          this.splitTexts[s] = c;
+          gsap.set(c.lines, { opacity: r });
+        }
+      });
+
       let u = 0;
       const x = (o, s) => {
         o !== s &&
@@ -340,35 +345,40 @@ const H = {
               ));
           }));
       };
+
       if (
         ((this.timelines.scroller = ScrollTrigger.create({
           trigger: this.elements.scroller,
           start: "top top",
-          end: () => `+=${a * b * g}px`,
+          end: () => `+=${a * b * g * 0.45}px`,
           pin: !0,
           scrub: !0,
           markers: this.debug ?? !1,
           onUpdate: (o) => {
             const s = Math.min(o.progress, g) / g;
             let n = Math.floor(s * a + 1e-6);
-            ((n = Math.max(0, Math.min(a - 1, n))), gsap.set(e, { scaleX: s }));
+            n = Math.max(0, Math.min(a - 1, n));
+
+            gsap.set(e, { scaleX: s });
+
             const c = n + 1;
-            if (
-              ((t.textContent = c.toString().padStart(2, "0")),
-              n !== u && (x(u, n), (u = n)),
-              this.splitTexts[n])
-            ) {
-              const p = s * a - n,
-                v = Math.min(p * 1.5, 1),
-                y = this.splitTexts[n].chars.length,
-                m = Math.floor(v * y);
-              this.splitTexts[n].chars.forEach((f, k) => {
-                if (k < m) gsap.set(f, { opacity: 1 });
-                else if (k === m) {
-                  const S = v * y - m;
-                  gsap.set(f, { opacity: r + S * (1 - r) });
-                } else gsap.set(f, { opacity: r });
-              });
+            t.textContent = c.toString().padStart(2, "0");
+
+            if (n !== u) {
+              x(u, n);
+              u = n;
+            }
+
+            if (this.splitTexts[n]) {
+              // Calculate item progress (0 to 1) and accelerate completion
+              const p = s * a - n;
+              const progress = Math.min(p * 1.5, 1);
+
+              // Calculate target opacity for all lines in the block together
+              const targetOpacity = r + progress * (1 - r);
+
+              // Apply opacity to all lines at once
+              gsap.set(this.splitTexts[n].lines, { opacity: targetOpacity });
             }
           },
         })),
@@ -376,9 +386,10 @@ const H = {
       ) {
         const o = this.elements.scroller.offsetTop,
           s = this.elements.scroller.offsetHeight,
-          n = a * b * g,
+          n = a * b * g * 0.45,
           c = o + s + n;
-        ((this.timelines.backgroundFixed = ScrollTrigger.create({
+
+        this.timelines.backgroundFixed = ScrollTrigger.create({
           trigger: this.block,
           start: "top top",
           end: () => `+=${c}px`,
@@ -388,18 +399,15 @@ const H = {
           onUpdate: (p) => {
             this.animateBackgroundChild(p.progress);
           },
-        })),
-          ScrollTrigger.refresh(),
-          this.log(
-            "Created background pin with pixel-based distances:",
-            "log",
-            {
-              scrollerOffset: o + "px",
-              scrollerHeight: s + "px",
-              animationDistance: n + "px",
-              total: c + "px",
-            },
-          ));
+        });
+
+        ScrollTrigger.refresh();
+        this.log("Created background pin with pixel-based distances:", "log", {
+          scrollerOffset: o + "px",
+          scrollerHeight: s + "px",
+          animationDistance: n + "px",
+          total: c + "px",
+        });
       }
     }
   },
