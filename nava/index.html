@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NAVA Agency Uganda | Where Schools Meet Families</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 554.77 608.21'%3E%3Cpath fill='%231d6bff' fill-rule='evenodd' d='M248.38,0 L154.39,54.06 L154.39,111.19 L248.38,160.91 L248.38,0 ZM307.47,0 L307.47,260.41 L45.62,116.58 L0,146.36 L0,463.8 L95.86,518.16 L95.86,260.41 L403.33,429.9 L403.33,52.59 L307.47,0 ZM462.33,87.1 L462.33,518.16 L554.54,462.29 L554.77,141.59 L462.33,87.1 ZM155.8,356.08 L150.07,547.49 L247.56,608.21 L247.56,518.16 L352.92,578.27 L446.49,524.86 L155.8,356.08 Z'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#111;--mute:#6b6b6b;--card:#f4fbfd;--line:#dceef4;--or:#1d6bff;--or2:#4aa8ff;--sky:#bfe0ff;--nav:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.55 Inter,system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+.serif,h1,h2,h3{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.01em}
+i{font-style:italic}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.sky{background:linear-gradient(#dff6fc 0%,#eef9fd 55%,var(--bg) 100%);padding-bottom:30px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;padding:14px 20px}
+nav .in{max-width:1040px;margin:auto;background:var(--nav);border-radius:99px;padding:8px 8px 8px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 1px 0 var(--line)}
+nav .logo{font:italic 26px 'Instrument Serif',serif}
+nav .l{display:flex;gap:26px;font-size:12px;font-weight:500}
+nav .l a.on{color:var(--or)}
+.btn{display:inline-block;border:0;cursor:pointer;font:500 13px Inter,sans-serif;padding:12px 22px;border-radius:99px;background:var(--or);color:#fff}
+.btn.dk{background:#111;color:#fff;padding:9px 18px;font-size:12px}
+.btn.ol{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--or);outline-offset:2px}
+.hero{text-align:center;padding:50px 0 20px}
+.pill{display:inline-block;background:rgba(255,255,255,.7);color:#111;border-radius:99px;padding:5px 14px;font-size:11px;font-weight:500;margin-bottom:22px; margin-inline: 12px;}
+.hero p{max-width:560px;margin:18px auto 24px;color:var(--mute)}
+.hero .b{display:flex;gap:10px;justify-content:center;flex-wrap:wrap; padding: 0 12px}
+.strip{display:flex;gap:14px;justify-content:center;margin-top:40px;overflow:hidden;align-items:flex-end}
+.ph{flex:0 0 150px;height:190px;border-radius:14px;color:#fff;font:italic 20px 'Instrument Serif',serif;padding:14px;display:flex;align-items:flex-end;text-align:left;line-height:1.1}
+.ph:nth-child(2n){height:150px}
+.logos{display:flex;justify-content:center;gap:clamp(18px,5vw,56px);flex-wrap:wrap;padding:36px 0;color:var(--mute);font-weight:600;font-size:14px}
+sec,section{display:block;padding:54px 0}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;margin-bottom:10px}
+.tag:before{content:"";width:7px;height:7px;background:var(--or);border-radius:50%}
+.about{display:grid;grid-template-columns:120px 1fr;gap:20px}
+.about .big{font-size:20px;line-height:1.4;max-width:620px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;color:var(--mute);font-size:12px;margin:22px 0;max-width:640px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stats b{font:400 40px 'Instrument Serif',serif;display:block;line-height:1}
+.stats span{font-size:10px;color:var(--mute);text-transform:uppercase}
+.ban{background:linear-gradient(180deg,transparent,#4aa8ff 40%,#1d6bff);color:#fff;padding:110px 0 50px;margin-top:20px}
+.ban h2{max-width:640px;font-family:Inter,sans-serif;font-weight:500;font-size:clamp(28px,4vw,40px);letter-spacing:-.02em}
+.ban .btn{background:#fff;color:#111;margin-top:22px}
+.svc{display:grid;grid-template-columns:1fr 1.2fr;gap:14px;margin-top:22px}
+.acc{display:flex;flex-direction:column;gap:6px}
+.acc div{background:var(--card);border-radius:10px;padding:12px 14px;font-size:13px;font-weight:500}
+.acc div.o{padding:16px 14px}.acc div small{display:block;color:var(--mute);font-weight:400;margin-top:6px;font-size:12px}
+.vis{border-radius:14px;min-height:260px;background:linear-gradient(135deg,#7ab6ff,#46d0e6 60%,#1d6bff);display:grid;place-items:center;padding:20px}
+.vis div{background:#fff;color:#111;border-radius:10px;padding:16px;width:78%;font-size:12px;font-weight:600}
+.vis svg{width:100%;height:70px;margin-top:8px}
+.c{text-align:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;min-height:170px;display:flex;flex-direction:column;justify-content:flex-end;text-align:left}
+.card .ic{width:26px;height:26px;border-radius:7px;background:rgba(29,107,255,.15);color:var(--or);display:grid;place-items:center;font-size:13px;margin-bottom:auto}
+.card h3{font:500 14px Inter,sans-serif;margin:30px 0 4px}.card p{font-size:12px;color:var(--mute)}
+.card.pop{border-color:var(--or)}
+.price{font:400 36px 'Instrument Serif',serif}
+.vid{background:linear-gradient(135deg,#a9d4ff,#5fd6e8);border-radius:16px;aspect-ratio:16/8;display:grid;place-items:center;color:#fff;font:italic 28px 'Instrument Serif',serif;margin-top:22px;text-align:center;padding:20px}
+.test{display:grid;grid-template-columns:1.1fr 1fr .8fr;gap:14px;margin-top:22px;align-items:stretch}
+.test .q{font-size:13px;align-self:center}
+.test .im{border-radius:12px;min-height:200px;background:linear-gradient(160deg,#5fa8e8,#1d4f9f);color:#fff;font-size:11px;padding:12px;display:flex;align-items:flex-end}
+.test .n{background:var(--card);border-radius:12px;padding:16px;font-size:11px;color:var(--mute);display:flex;flex-direction:column;justify-content:flex-end}
+.test .n b{font:400 44px 'Instrument Serif',serif;color:var(--ink);line-height:1}
+.cta{text-align:center;position:relative;padding:70px 0}
+.cta p{color:var(--mute);font-size:12px;max-width:340px;margin:10px auto 18px}
+.fl{position:absolute;border-radius:12px}
+.contact{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;padding:50px 0 30px}
+.contact small{display:block;color:var(--mute);font-size:10px;margin-top:22px}
+.contact a{display:block;color:var(--or);font-size:12px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+form .f{grid-column:1/-1}
+input,select,textarea{width:100%;font:13px Inter,sans-serif;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+textarea{min-height:90px}
+form .btn{grid-column:1/-1;padding:15px;border-radius:99px}
+.meadow{background:linear-gradient(#cfe6ff 0%,#e9e2b0 30%,#f2a53a 62%,#ff6a1f 82%,#b5471a);text-align:center;overflow:hidden;margin-top:30px}
+.meadow .w{font:italic clamp(90px,24vw,260px)/1 'Instrument Serif',serif;color:#fff;letter-spacing:-.03em;padding-top:60px}
+.foot{background:var(--bg);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:20px;font-size:11px;color:var(--mute)}
+.foot nav2{display:flex;gap:18px}
+.view{display:none}.view.on{display:block}
+body{background:linear-gradient(#fff,#effafd 40%,#fff 75%,#f0fbfe)}
+section{min-height:90vh;display:flex;flex-direction:column;justify-content:center}section.about,section.contact{display:grid;align-content:center}section.c .tag{align-self:center}
+.cmp{width:100%;border-collapse:collapse;margin-top:36px;font-size:13px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}.cmp th,.cmp td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line)}.cmp th{background:var(--card);font-weight:600}.cmp td:last-child{color:var(--or);font-weight:500}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}.tl div{border-top:2px solid var(--or);padding-top:16px;font-size:13px;color:var(--mute)}.tl b{display:block;color:var(--ink);font:400 24px 'Instrument Serif',serif;margin-bottom:6px}
+.big2{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;text-align:center}.big2 b{font:400 72px/1 'Instrument Serif',serif;color:var(--or);display:block}.big2 span{font-size:12px;color:var(--mute)}
+.cta2{background:linear-gradient(135deg,#e1f7fc,#bfe1ff);text-align:center;padding:110px 20px}.cta2 p{max-width:480px;margin:14px auto 26px;color:var(--mute)}
+@media(max-width:760px){section{min-height:auto}.tl,.big2{grid-template-columns:1fr 1fr}}
+.sky{background:radial-gradient(circle at 20% 10%,#c9f2fb,transparent 42%),radial-gradient(circle at 85% 0,#d4e8ff,transparent 48%),linear-gradient(#eaf9fd,#fff);background-size:150% 150%,150% 150%,100% 100%;animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{background-position:100% 100%,0 70%,0 0}}
+.logo{display:flex;align-items:center;gap:9px}.lgs{width:24px;height:27px}
+.lgb{width:58px;height:64px;display:none;margin:0 auto 22px}
+#lg path{fill:url(#lgg);stroke:#1d6bff;stroke-width:3;stroke-dasharray:2600;stroke-dashoffset:2600;fill-opacity:0;animation:draw 2.6s ease forwards,glow 5s 2.6s ease-in-out infinite}
+@keyframes draw{to{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes glow{50%{filter:drop-shadow(0 0 7px rgba(29,107,255,.55))}}
+.hero>*{animation:up .8s both}.hero>*:nth-child(2){animation-delay:.12s}.hero>*:nth-child(3){animation-delay:.22s}.hero>*:nth-child(4){animation-delay:.32s}.hero>*:nth-child(5){animation-delay:.42s}
+@keyframes up{from{opacity:0;transform:translateY(16px)}}
+.ph{animation:fl 6s ease-in-out infinite}.ph:nth-child(2n){animation-delay:-3s}@keyframes fl{50%{transform:translateY(-10px)}}
+.btn{transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(29,107,255,.25)}
+.hero{padding:70px 0 40px}.hero p{margin:24px auto 32px}.strip{margin-top:60px;gap:20px}
+sec,section{padding:96px 0}.logos{padding:56px 0}.grid3{gap:22px;margin-top:44px}.card{min-height:210px;padding:26px}.two{gap:32px;margin:30px 0}.about{gap:40px}.svc{margin-top:36px;gap:22px}.acc div{padding:16px 18px}.contact{padding:80px 0 50px;gap:50px}form{gap:14px}.step{padding:28px}.vid{margin-top:36px}.test{margin-top:36px;gap:22px}
+.ban{background:linear-gradient(180deg,transparent,#d9f3fb 40%,#a9dcfa);color:var(--ink);padding:130px 0 80px}.ban .btn{background:var(--or);color:#fff}
+.meadow{background:linear-gradient(#e7f9fd 0%,#c9effa 35%,#98d2fb 70%,#5aa6f2);margin-top:50px}.meadow .w{text-shadow:0 6px 40px rgba(29,107,255,.35)}
+.faq{max-width:680px;margin:36px auto 0;text-align:left}details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:12px}summary{cursor:pointer;font-weight:500}details p{color:var(--mute);margin-top:10px;font-size:13px}
+.ck{list-style:none;padding:0;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.ck li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:13px}.ck li:before{content:"✓ ";color:var(--or);font-weight:600}
+@media(max-width:760px){.ck{grid-template-columns:1fr}sec,section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}#lg path{stroke-dashoffset:0;fill-opacity:1}}
+.ph2{height:170px}
+.step{background:var(--card);border-radius:12px;padding:20px}
+.step b{font:400 30px 'Instrument Serif',serif;color:var(--or)}
+@media(max-width:760px){nav .l{display:none}.about,.svc,.contact,.test{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.fl{display:none}}
+body{font-size:17px;overflow-x:clip}
+nav{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);z-index:50}.sky{padding-top:84px}
+nav .in{position:relative;box-shadow:0 6px 24px rgba(29,107,255,.08)}nav .l{font-size:14px;gap:28px}
+.rt{display:flex;gap:8px;align-items:center}.mb{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:20px;cursor:pointer;place-items:center}
+.btn{font-size:15px}.btn.dk{font-size:13px}h1{font-size:clamp(40px,7vw,76px)}h2{font-size:clamp(34px,4.8vw,54px)}
+.hero p{font-size:17px}.pill,.tag{font-size:13px}.about .big{font-size:24px}.two{font-size:15px}.stats b{font-size:52px}.stats span{font-size:12px}
+.card h3{font-size:18px}.card p{font-size:15px}.acc div{font-size:16px}.acc div small{font-size:14px}.tl div{font-size:15px}.tl b{font-size:28px}.cmp{font-size:15px}details p{font-size:15px}summary{font-size:17px}.ck li{font-size:15px}
+.big2 span{font-size:15px}.test .q{font-size:16px}.test .n{font-size:13px}.price{font-size:44px}.ph{font-size:22px}.vis div{font-size:14px}.contact a{font-size:16px}.contact small{font-size:12px}
+input,select,textarea{font-size:16px}.foot{font-size:13px}.cta2 p{font-size:17px}section p[style]{font-size:16px!important}
+.rv{opacity:0;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.rv.l{transform:translateX(-48px)}.rv.r{transform:translateX(48px)}.rv.in{opacity:1;transform:none}
+@media(max-width:980px){.grid3{grid-template-columns:1fr 1fr!important}.tl{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){nav{padding:10px 14px}nav .in{padding:6px 6px 6px 16px}.mb{display:grid}nav.open .l{display:flex;flex-direction:column;gap:2px;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border-radius:22px;padding:10px;box-shadow:0 18px 40px rgba(29,107,255,.18);font-size:17px}nav.open .l a{padding:14px 16px;border-radius:12px}nav.open .l a:hover,nav.open .l a.on{background:var(--card)}.hero{padding:40px 0 20px}.strip .ph{flex-basis:130px;height:160px}.strip .ph:nth-child(2n){height:130px}.about{gap:12px}.stats b{font-size:44px}.big2 b{font-size:56px}.cta2{padding:80px 20px}.cmp{display:block;overflow-x:auto}}
+@media(max-width:560px){.grid3,.tl{grid-template-columns:1fr!important}form{grid-template-columns:1fr}.hero .b .btn{width:100%;text-align:center}.big2{grid-template-columns:1fr}.btn.dk{padding:9px 12px}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+body{font-size:19px}nav .l{font-size:16px}.btn{font-size:17px}.btn.dk{font-size:14px}
+h1{font-size:clamp(44px,7.5vw,84px)}h2{font-size:clamp(38px,5.2vw,60px)}
+ .pill,.tag{font-size:14px}.about .big{font-size:27px}.two{font-size:17px}.stats b{font-size:58px}.stats span{font-size:13px}
+.card h3{font-size:20px}.card p{font-size:17px}.acc div{font-size:18px}.acc div small{font-size:16px}.tl div{font-size:17px}.tl b{font-size:32px}.cmp{font-size:17px}details p{font-size:17px}summary{font-size:19px}.ck li{font-size:17px}
+.big2 span{font-size:17px}.test .q{font-size:18px}.test .n{font-size:15px}.price{font-size:50px}.vis div{font-size:16px}.contact a{font-size:18px}.contact small{font-size:14px}
+input,select,textarea{font-size:18px}.foot{font-size:15px}.cta2 p{font-size:19px}section p[style]{font-size:18px!important}
+.card .ic{width:52px;height:52px;border-radius:16px;font-size:0}.card .ic svg{width:26px;height:26px}
+.acc div{position:relative;padding-left:66px}.acc .ai{position:absolute;left:16px;top:-6px;color:var(--or)}.acc .ai svg{width:26px;height:26px}
+.ph{position:relative;overflow:hidden;flex:0 0 190px;height:240px}.ph:nth-child(2n){height:190px}.ph .sc,.vid .sc,.test .im .sc{position:absolute;inset:0;width:100%;height:100%}
+.ph span,.test .im span{position:relative;background:rgba(17,40,90,.6);padding:5px 12px;border-radius:99px;font:500 14px Inter,sans-serif;font-style:normal}
+.vid,.test .im{position:relative;overflow:hidden}.pb{position:relative;background:rgba(255,255,255,.93);color:var(--ink);font:500 19px Inter,sans-serif;padding:15px 24px;border-radius:99px;display:inline-flex;gap:10px;align-items:center}
+.pics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:50px 0}.pics figure{margin:0;border-radius:22px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--card)}.pics .sc{width:100%;height:100%;display:block}.pics figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.93);padding:7px 15px;border-radius:99px;font-size:16px;font-weight:500}
+.contact a svg{vertical-align:-5px;margin-right:10px;width:22px;height:22px}
+@media(max-width:760px){.strip .ph{flex-basis:150px;height:190px}.strip .ph:nth-child(2n){height:150px}.pics{grid-template-columns:1fr}.stats b{font-size:48px}.big2 b{font-size:60px}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="lgg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4aa8ff"><animate attributeName="stop-color" values="#4aa8ff;#2fd3e6;#4aa8ff" dur="6s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#1d6bff"/></linearGradient><symbol id="lg" viewBox="0 0 554.77 608.21"><path fill-rule="evenodd" d="M248.38,0 L154.39,54.06 L154.39,111.19 L248.38,160.91 L248.38,0 ZM307.47,0 L307.47,260.41 L45.62,116.58 L0,146.36 L0,463.8 L95.86,518.16 L95.86,260.41 L403.33,429.9 L403.33,52.59 L307.47,0 ZM462.33,87.1 L462.33,518.16 L554.54,462.29 L554.77,141.59 L462.33,87.1 ZM155.8,356.08 L150.07,547.49 L247.56,608.21 L247.56,518.16 L352.92,578.27 L446.49,524.86 L155.8,356.08 Z"/></symbol></defs></svg>
+
+<div class="sky"><nav><div class="in"><a class="logo" href="#home" aria-label="NAVA home"><svg class="lgs" viewBox="0 0 554.77 608.21"><use href="#lg"/></svg><span>NAVA</span></a>
+<div class="l"><a href="#home" data-n="home">Home</a><a href="#parents" data-n="parents">For Parents &amp; Students</a><a href="#schools" data-n="schools">For Schools</a><a href="#about" data-n="about">About &amp; Contact</a></div>
+<div class="rt"><a class="btn dk" href="https://wa.me/256792341381">WhatsApp Us</a><button class="mb" id="mb" aria-label="Menu" aria-expanded="false">☰</button></div></div></nav>
+
+<!-- HOME HERO -->
+<div class="wrap hero" id="hero"></div></div>
+
+<main>
+<!-- PAGE 1 -->
+<div class="view" id="v-home">
+<div class="wrap">
+<section class="c"><div class="tag">Who we serve</div><h2>Every stage, <i>one platform</i></h2><div class="grid3" style="grid-template-columns:repeat(4,1fr)"><div class="card"><div class="ic">1</div><h3>Nursery</h3><p>Safe, caring first classrooms that parents can see before they trust.</p></div><div class="card"><div class="ic">2</div><h3>Primary</h3><p>Fees, UNEB performance and teachers shown clearly for P.1 to P.7.</p></div><div class="card"><div class="ic">3</div><h3>Secondary</h3><p>Labs, boarding, sports and results for senior school choices.</p></div><div class="card"><div class="ic">4</div><h3>University</h3><p>Campus vibes, courses and hostels students can picture themselves in.</p></div></div></section>
+<section class="about"><div class="tag">About</div><div><p class="big">We help parents find the right school, and help good schools get found by the right parents. We use real videos, real stories and real results, not staged photos.</p>
+<div class="two"><p>Parents choose schools on their phones at 9pm. We put your school in front of them with clear fees, location and life inside the classroom.</p><p>Our team works across Uganda. We reply to every inquiry fast, so no parent goes cold.</p></div>
+<div class="stats"><div><b>10,000+</b><span>Parents reached monthly</span></div><div><b>15,000+</b><span>Students connected</span></div><div><b>3</b><span>Packages for every school</span></div><div><b>5 min</b><span>Reply to every inquiry</span></div></div></div></section></div>
+<div class="wrap"><section class="c"><div class="tag">Who we help</div><h2>Two sides, <i>one bridge</i></h2><div class="grid3" style="grid-template-columns:1fr 1fr"><div class="card"><h3>For parents</h3><p>See real classrooms, know the real fees and hear from other parents, all free. Join the WhatsApp group for schools in your region.</p><a class="btn" href="#parents" style="margin-top:18px;align-self:flex-start">Find a school</a></div><div class="card"><h3>For schools</h3><p>Real video, targeted ads and fast replies. Three packages from 500k a month, with a free audit of your Facebook page.</p><a class="btn ol" href="#schools" style="margin-top:18px;align-self:flex-start">Fill my classrooms</a></div></div></section></div>
+<div class="ban"><div class="wrap"><h2>Empty desks are not because your school is bad. It's because parents don't see you.</h2><a class="btn" href="#schools">Fill my classrooms</a></div></div>
+<div class="wrap"><section><div class="tag">Our Services</div><h2>Get seen by the right parents</h2>
+<div class="svc"><div class="acc"><div class="o">TikTok &amp; Reels for Schools<small>Real classroom life that parents actually watch: pupils reading, teachers explaining.</small></div><div class="o">Facebook Ads for Admissions<small>Ads shown to parents within 5km of your school who can afford your fees.</small></div><div class="o">Posters That Parents Understand<small>Fees, location and contact on one clear poster, no blur, no guessing.</small></div><div class="o">WhatsApp Auto-Reply<small>Instant answers on fees and visits, day or night.</small></div><div class="o">Drone &amp; Open Day Coverage<small>Campus from above and your open day filmed for sharing.</small></div><div class="o">Weekly Parent Call Report<small>Who inquired, who visited, who is ready to enrol.</small></div></div>
+<div class="vis"><div>Parent inquiries per week<svg viewBox="0 0 300 70"><path d="M0 60 C40 55 60 30 90 40 S140 8 170 30 S230 55 300 12" fill="none" stroke="#1d6bff" stroke-width="3"/></svg></div></div></div></section>
+<section><div class="tag">How it works</div><h2>Show, target, <i>connect</i></h2><div class="tl"><div><b>1. Show</b>We visit and film real school life, not staged photos.</div><div><b>2. Target</b>Ads reach parents near you on Facebook and TikTok.</div><div><b>3. Connect</b>We reply to every "Fees?" comment in 5 minutes.</div><div><b>4. Enrol</b>Saturday visit, Monday admission.</div></div></section>
+<section class="c"><div class="tag">Watch</div><h2>Watch how we show schools</h2><div class="vid">Embed one featured school video here</div></section>
+<section class="c"><div class="tag">Why choose us</div><h2>Built for Ugandan schools and parents</h2>
+<div class="grid3"><div class="card"><div class="ic">▶</div><h3>Real footage</h3><p>We visit and film real school life.</p></div><div class="card"><div class="ic">◎</div><h3>Targeted ads</h3><p>Parents within 5km who can afford your fees.</p></div><div class="card"><div class="ic">✆</div><h3>5-minute replies</h3><p>Inquiry today, Saturday visit, Monday admission.</p></div><div class="card"><div class="ic">$</div><h3>Clear pricing</h3><p>Three flat packages, no hidden charges.</p></div><div class="card"><div class="ic">▣</div><h3>Weekly reports</h3><p>You see every parent call and visit.</p></div><div class="card"><div class="ic">⌂</div><h3>Local teams</h3><p>Neighbors in your region who know your parents.</p></div></div></section><section class="c"><div class="tag">Results</div><h2>What one school <i>saw</i></h2><div class="big2"><div><b>32</b><span>inquiries in 3 weeks</span></div><div><b>19</b><span>new admissions</span></div><div><b>10</b><span>videos plus ads</span></div></div></section><section><div class="tag">Questions</div><h2>Common questions</h2><div class="faq"><details><summary>Is NAVA free for parents?</summary><p>Yes. Parents never pay. Schools pay for their marketing.</p></details><details><summary>Which regions do you cover?</summary><p>We are based in Kololo and work across Uganda with local teams.</p></details><details><summary>How fast do you reply?</summary><p>Within 5 minutes when a parent comments or messages about fees.</p></details><details><summary>What do schools pay?</summary><p>Packages run from 500k to 1.2M a month. See the schools page.</p></details><details><summary>Can I try before I pay?</summary><p>The first 5 schools in each region get a 1-week free trial.</p></details><details><summary>Do you work with universities?</summary><p>Yes. We show campus life, courses and hostels to students.</p></details></div></section></div>
+<div class="cta2"><h2>Ready to find your school <i>or fill your classrooms?</i></h2><p>Let's talk today. We reply in minutes.</p><a class="btn" href="https://wa.me/256792341381">Chat on WhatsApp</a> <a class="btn ol" href="tel:+256700166432">Call us</a></div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="view" id="v-parents"><div class="wrap">
+<section class="c"><div class="tag">For Parents</div><h2>Know the school before you go</h2>
+<div class="grid3"><div class="card"><div class="ic">▶</div><h3>See before you visit</h3><p>30-second videos of classrooms, teachers, toilets, lunch and playground.</p></div><div class="card"><div class="ic">$</div><h3>Know the truth</h3><p>Real fees, transport, Google Maps pin and UNEB performance.</p></div><div class="card"><div class="ic">♥</div><h3>Hear from other parents</h3><p>Video reviews: "Why I chose this school."</p></div></div></section>
+<section><div class="tag">In every video</div><h2>What you will <i>see</i> before you visit</h2><ul class="ck"><li>Classrooms and class sizes</li><li>Teachers explaining a lesson</li><li>Toilets and hygiene</li><li>Lunch and meal times</li><li>Playground and sports</li><li>Fees, transport and map pin</li></ul></section>
+<section><div class="tag">Your path</div><h2>Four easy steps to the <i>right school</i></h2><div class="tl"><div><b>1. Watch</b>Short videos of real classrooms and teachers.</div><div><b>2. Compare</b>Fees, transport, map and UNEB results side by side.</div><div><b>3. Visit</b>Book a Saturday visit through WhatsApp.</div><div><b>4. Apply</b>Choose with confidence and enrol.</div></div></section>
+<section class="about"><div class="tag">For Students</div><div><h2>Secondary and university</h2><p class="big" style="margin-top:12px">Looking for a senior school with a good lab? A university with hostels near MUBS? We show campus life, sports and hostels, not boring brochures.</p></div></section>
+<section><div class="tag">On the visit</div><h2>Questions to <i>ask</i> every school</h2><ul class="ck"><li>What are the total fees per term, including extras?</li><li>How do pupils get to and from school?</li><li>What was last year's UNEB performance?</li><li>How big are the classes?</li><li>What is lunch and what does it cost?</li><li>How do teachers report to parents?</li></ul><div class="faq"><details><summary>Do I pay NAVA anything?</summary><p>No. It is free for parents and students.</p></details><details><summary>How do I find schools near me?</summary><p>Tell us your area on WhatsApp and we send options.</p></details></div></section>
+<section class="contact"><div><h2>Join our free <i>parents group</i></h2><p style="color:var(--mute);margin-top:10px;font-size:13px">Schools in your region. Ask us about schools near you.</p></div>
+<form onsubmit="return false"><input class="f" placeholder="Your area"><input class="f" placeholder="Your phone number"><a class="btn" href="https://wa.me/256792341381" style="grid-column:1/-1;text-align:center; color:white">Join the WhatsApp group</a></form></section></div></div>
+
+<!-- PAGE 3 -->
+<div class="view" id="v-schools"><div class="wrap">
+<section><div class="tag">Our system</div><h2>Your marketing department, without the 3M salary</h2>
+<div class="grid3"><div class="step"><b>Show</b><p>We visit and film real life: pupils reading, teachers explaining.</p></div><div class="step"><b>Target</b><p>Facebook and TikTok ads to parents within 5km who can afford your fees.</p></div><div class="step"><b>Connect</b><p>Parent comments "Fees?" and we reply in 5 minutes. Visit Saturday, admission Monday.</p></div></div></section>
+<section><div class="tag">The problem</div><h2>Why parents <i>don't call</i></h2><div class="grid3"><div class="card"><div class="ic">1</div><h3>No fees shown</h3><p>Parents skip posts without a price.</p></div><div class="card"><div class="ic">2</div><h3>Blurry posters</h3><p>Low quality hides a good school.</p></div><div class="card"><div class="ic">3</div><h3>Slow replies</h3><p>A parent who waits a day chooses another school.</p></div></div></section>
+<section><div class="tag">Compare</div><h2>Before and after <i>NAVA</i></h2><table class="cmp"><tr><th></th><th>Without NAVA</th><th>With NAVA</th></tr><tr><td>Content</td><td>Occasional photos</td><td>Weekly real video</td></tr><tr><td>Reach</td><td>Existing followers</td><td>Parents within 5km</td></tr><tr><td>Replies</td><td>Hours or days</td><td>5 minutes</td></tr><tr><td>Reporting</td><td>None</td><td>Weekly call report</td></tr></table></section>
+<section class="c"><div class="tag">Packages</div><h2>Pick your <i>growth</i> plan</h2>
+<div class="grid3"><div class="card"><h3>Visibility</h3><div class="price">500k<small style="font:12px Inter"> /month</small></div><p>12 videos, 12 posters and page management.</p></div><div class="card pop"><h3>Growth · Most popular</h3><div class="price">800k<small style="font:12px Inter"> /month</small></div><p>Visibility plus paid ads (20k–50k budget), WhatsApp auto-reply and weekly parent-call report. 15–30 inquiries per term.</p></div><div class="card"><h3>Dominance</h3><div class="price">1.2M<small style="font:12px Inter"> /month</small></div><p>Daily content, drone video, open day coverage, and we handle inquiries until the visit. You choose students.</p></div></div></section></div>
+<div class="wrap"><section><div class="tag">Your week</div><h2>From inquiry to <i>admission</i></h2><div class="tl"><div><b>Mon</b>Videos and posters go live.</div><div><b>Wed</b>Ads reach nearby parents.</div><div><b>Fri</b>Visits booked for Saturday.</div><div><b>Sun</b>Report on every call.</div></div></section>
+<section><div class="tag">Every week</div><h2>What you <i>get</i> and see</h2><ul class="ck"><li>New videos and posters, ready to post</li><li>Weekly report of parent calls</li><li>WhatsApp auto-reply, 24 hours</li><li>Saturday visits booked for you</li></ul><div class="faq"><details><summary>Do I need to pay for the ads myself?</summary><p>Growth includes a 20k–50k ad budget plan. We show you where every shilling goes.</p></details><details><summary>Can I start small?</summary><p>Yes. Visibility at 500k a month is built for small schools.</p></details></div></section></div>
+<div class="ban"><div class="wrap"><h2>The first 5 schools in each region get a 1-week free trial.</h2><a class="btn" href="#about">Claim my trial</a></div></div>
+<div class="wrap"><section class="contact"><div><h2>Get a free school <i>audit</i></h2><p style="color:var(--mute);margin-top:10px;font-size:13px">We check your Facebook page and tell you why parents don't call.</p></div>
+<form onsubmit="return false"><input placeholder="School name"><input placeholder="Phone number"><input class="f" placeholder="Facebook page link"><button class="btn">Get my free audit</button></form></section></div></div>
+
+<!-- PAGE 4 -->
+<div class="view" id="v-about"><div class="wrap">
+<section><div class="tag">Our work</div><h2>We don't just talk. We show <i>results.</i></h2>
+<div class="test"><div class="q"><p class="serif" style="font-size:22px;line-height:1.3">25 empty P.1 slots. 10 videos and ads later: 32 inquiries and 19 admissions in 3 weeks.</p><p style="color:var(--mute);margin-top:10px">Case study: Kiwatule school (replace with your first free-trial school).</p></div><div class="im">Facebook page: before and after NAVA</div><div class="n"><b>19</b>admissions in 3 weeks</div></div></section>
+<section class="about"><div class="tag">About</div><div><p class="big">NAVA Agency Uganda was founded in 2026 in Kololo by Muhammad Salaam, a Ugandan marketing professional. We saw two problems: parents walking tired looking for schools, and good schools with empty chairs. So we built a bridge.</p>
+<div class="two"><p>We are not a big Kololo agency charging 3M. We are your neighbors in different regions, and we understand parents because we live where you are.</p><p><b style="color:var(--ink)">Mission:</b> Every child learns in a good school, and every good school is full.</p></div></div></section><section class="c"><div class="tag">Our values</div><h2>How we <i>work</i></h2><div class="grid3"><div class="card"><div class="ic">✓</div><h3>Honest</h3><p>Real fees, real footage, no hiding.</p></div><div class="card"><div class="ic">⚡</div><h3>Fast</h3><p>Every parent inquiry answered in 5 minutes.</p></div><div class="card"><div class="ic">♥</div><h3>Local</h3><p>Neighbors in your region, not a distant agency.</p></div></div></section><section class="c"><div class="tag">Contact</div><h2>Talk to us <i>today</i></h2><div class="grid3" style="grid-template-columns:repeat(4,1fr)"><div class="card"><h3>WhatsApp</h3><p>+256 792 341 381</p></div><div class="card"><h3>Call</h3><p>+256 700 166 432</p></div><div class="card"><h3>Email</h3><p>hello@nava.co.ug</p></div><div class="card"><h3>Visit</h3><p>Kololo, Kampala</p></div></div></section></div></div>
+</main>
+
+<!-- shared contact + footer -->
+<div class="wrap"><div class="contact"><div><h2>Ready to grow your school? <i>Let's talk</i></h2><small>Get in touch</small><a href="mailto:hello@nava.co.ug">hello@nava.co.ug</a><a href="https://wa.me/256792341381">WhatsApp +256 792 341 381</a><a href="tel:+256700166432">Call +256 700 166 432</a><small>Kololo, Kampala. We work across Uganda.</small></div>
+<form onsubmit="return false"><select class="f"><option>I am a parent</option><option>I am a school director</option><option>I am a student</option></select><input placeholder="My area"><input placeholder="My number"><textarea class="f" placeholder="Message"></textarea><button class="btn">Send message</button></form></div></div>
+<div class="meadow"><div class="w">Nava</div></div>
+<div class="foot"><span>© 2026 NAVA Agency Uganda. Where Schools Meet Families.</span><span><a href="#home">Home</a> &nbsp; <a href="#parents">Parents</a> &nbsp; <a href="#schools">Schools</a> &nbsp; <a href="#about">About</a></span></div>
+
+<script>
+const H={
+home:['100% real videos, real stories','Building schools\' <i>full</i> classrooms and happy families','Where Schools Meet Families. We help parents find the right school and help good schools get found.',1],
+parents:['Free for parents','Finding a good school <i>shouldn\'t be</i> hard work','You finish work late and ask around on a boda. Blurry posters show no fees, no location. NAVA makes it simple and free.',0],
+schools:['For schools and institutions','Empty desks are not because your school is bad. <i>Parents don\'t see you.</i>','While you were teaching, parents moved to TikTok. At 9pm they choose next term\'s school on their phone.',0],
+about:['Founded 2026 in Kololo','Proof, people and <i>easy contact</i>','We work across Uganda. Reach us on WhatsApp, call or email.',0]};
+const C=['#4aa8ff,#1d4f9f','#2fd3e6,#1d6bff','#7ab6ff,#2d5a8a','#5fd6e8,#1d6bff','#6a8ad8,#2a3a7a','#2fd3e6,#2d5a8a'],L=['Classroom tour','Teachers','Playground','Parent review','Open day','Campus life'];
+function go(){let k=(location.hash||'#home').slice(1);if(!H[k])k='home';
+document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id==='v-'+k));
+document.querySelectorAll('nav [data-n]').forEach(a=>a.classList.toggle('on',a.dataset.n===k));
+const h=H[k];document.getElementById('hero').innerHTML=`<svg class="lgb" viewBox="0 0 554.77 608.21"><use href="#lg"/></svg><span class="pill">${h[0]}</span><h1>${h[1]}</h1><p>${h[2]}</p><div class="b"><a class="btn" href="#parents">I'm a parent looking for a school</a><a class="btn ol" href="#schools">I'm a school, fill my classrooms</a></div>`+(h[3]?'<div class="strip">'+C.map((c,i)=>`<div class="ph">${sv(i)}<span>${L[i]}</span></div>`).join('')+'</div>':'');
+document.title='NAVA Agency Uganda | '+k;window.scrollTo(0,0);closeM();fx()}
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;let io;
+function closeM(){document.querySelector('nav').classList.remove('open');const m=document.getElementById('mb');m.setAttribute('aria-expanded','false');m.textContent='☰'}
+function cnt(el){const m=el.dataset.t.match(/^([\d,]+)(.*)$/);if(!m)return;const n=+m[1].replace(/,/g,''),s=m[2],t0=performance.now();(function f(t){const p=RM?1:Math.min((t-t0)/1400,1),v=Math.round(n*(1-Math.pow(1-p,3)));el.textContent=v.toLocaleString('en-US')+s;if(p<1)requestAnimationFrame(f)})(t0)}
+function fx(){if(!io)io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add('in');if(el.dataset.t)cnt(el);io.unobserve(el)}),{threshold:.15});
+if(!window.rvd){window.rvd=1;document.querySelectorAll('.pics figure,.tag,section h2,.about .big,.two p,.card,.step,.tl>div,details,.ck li,.big2>div,.stats>div,.acc div,.test>*,.vid,.vis,.ban h2,.cta2>h2,.cta2>p,.contact>*,.cmp').forEach(e=>{const i=[...e.parentNode.children].indexOf(e);e.classList.add('rv',i%2?'r':'l');e.style.transitionDelay=Math.min(i,5)*80+'ms'})}
+document.querySelectorAll('.rv').forEach(e=>{e.classList.remove('in');io.observe(e)});
+document.querySelectorAll('.stats b,.big2 b,.n b').forEach(b=>{b.dataset.t=b.dataset.t||b.textContent;b.textContent=b.dataset.t.replace(/^[\d,]+/,'0');io.observe(b)})}
+document.getElementById('mb').onclick=()=>{const n=document.querySelector('nav'),o=n.classList.toggle('open'),m=document.getElementById('mb');m.setAttribute('aria-expanded',o);m.textContent=o?'✕':'☰'};
+document.addEventListener('click',e=>{if(!e.target.closest('nav'))closeM()});
+const IC={play:'<path d="M8 5v14l11-7z"/>',target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/>',phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/>',coin:'<circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1 1-1.5 2.5-1.5s2.5.7 2.5 1.7-1 1.5-2.5 1.8-2.5.8-2.5 1.8 1 1.7 2.5 1.7 2.5-.5 2.5-1.5"/>',heart:'<path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/>',chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',home:'<path d="M3 11l9-8 9 8v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/>',check:'<path d="M5 12l5 5 9-10"/>',bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',book:'<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2zM4 19a2 2 0 012-2h13"/>',flask:'<path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 001.3 2h12.4a1.5 1.5 0 001.3-2L14 9V3"/>',cap:'<path d="M2 9l10-5 10 5-10 5zM6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/>',smile:'<circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9.5h.01M15 9.5h.01"/>',tag:'<path d="M3 12V4h8l10 10-8 8zM7.5 8.5h.01"/>',image:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 16l5-5 5 5 3-3 5 5M9 8.5h.01"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',pin:'<path d="M12 21s7-6 7-12a7 7 0 10-14 0c0 6 7 12 7 12zM12 11.5h.01"/>',chat:'<path d="M4 5h16v11H9l-5 4z"/>'};
+const svg=k=>`<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[k]}</svg>`;
+const M={'Real footage':'play','Targeted ads':'target','5-minute replies':'phone','Clear pricing':'coin','Weekly reports':'chart','Local teams':'home','See before you visit':'play','Know the truth':'coin','Hear from other parents':'heart','Honest':'check','Fast':'bolt','Local':'heart','Nursery':'smile','Primary':'book','Secondary':'flask','University':'cap','No fees shown':'tag','Blurry posters':'image','Slow replies':'clock','WhatsApp':'chat','Call':'phone','Email':'mail','Visit':'pin','Visibility':'image','Growth':'chart','Dominance':'bolt','For parents':'heart','For schools':'cap'};
+const SC=[
+'<rect width="400" height="300" fill="#cfeefa"/><circle cx="330" cy="60" r="28" fill="#ffe28a"/><ellipse cx="90" cy="70" rx="40" ry="12" fill="#fff"/><path d="M0 230Q120 190 220 225T400 215V300H0z" fill="#8fd6a8"/><rect x="110" y="120" width="180" height="120" fill="#fff"/><path d="M100 125L200 70 300 125z" fill="#1d6bff"/><rect x="185" y="185" width="30" height="55" fill="#1d6bff"/><g fill="#7ab6ff"><rect x="130" y="145" width="28" height="28"/><rect x="242" y="145" width="28" height="28"/><rect x="130" y="190" width="28" height="28"/><rect x="242" y="190" width="28" height="28"/></g><path d="M200 70V35" stroke="#333" stroke-width="3"/><path d="M200 35h28l-6 8 6 8h-28z" fill="#2fd3e6"/><circle cx="70" cy="245" r="8" fill="#f2b48c"/><rect x="63" y="253" width="14" height="22" rx="5" fill="#2fd3e6"/><circle cx="335" cy="250" r="8" fill="#8a5a3c"/><rect x="328" y="258" width="14" height="22" rx="5" fill="#ffb347"/>',
+'<rect width="400" height="300" fill="#eaf7fd"/><rect x="60" y="40" width="280" height="110" rx="8" fill="#1d4f9f"/><path d="M85 75h90M85 95h140M85 115h70" stroke="#fff" stroke-width="5" stroke-linecap="round"/><circle cx="290" cy="90" r="22" fill="#2fd3e6"/><rect y="230" width="400" height="70" fill="#bfe3f5"/><circle cx="90" cy="195" r="14" fill="#f2b48c"/><circle cx="200" cy="195" r="14" fill="#8a5a3c"/><circle cx="310" cy="195" r="14" fill="#f2b48c"/><rect x="74" y="211" width="32" height="30" rx="10" fill="#4aa8ff"/><rect x="184" y="211" width="32" height="30" rx="10" fill="#ffb347"/><rect x="294" y="211" width="32" height="30" rx="10" fill="#4aa8ff"/><g fill="#fff" stroke="#1d6bff" stroke-width="3"><rect x="55" y="238" width="70" height="14"/><rect x="165" y="238" width="70" height="14"/><rect x="275" y="238" width="70" height="14"/></g>',
+'<rect width="400" height="300" fill="#d6f1fb"/><circle cx="60" cy="55" r="26" fill="#ffe28a"/><rect y="215" width="400" height="85" fill="#8fd6a8"/><path d="M90 215V120M150 215V120M80 120h80" stroke="#1d6bff" stroke-width="7" stroke-linecap="round"/><path d="M150 120L250 205" stroke="#2fd3e6" stroke-width="14" stroke-linecap="round"/><path d="M285 215l50-30 50 30" stroke="#4aa8ff" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="335" cy="165" r="12" fill="#f2b48c"/><rect x="326" y="177" width="18" height="22" rx="6" fill="#ffb347"/><circle cx="120" cy="100" r="11" fill="#8a5a3c"/><rect x="112" y="111" width="16" height="9" rx="4" fill="#1d6bff"/>',
+'<rect width="400" height="300" fill="#e3f6fc"/><circle cx="340" cy="60" r="26" fill="#ffe28a"/><rect y="235" width="400" height="65" fill="#c5e8f5"/><rect x="250" y="130" width="120" height="105" fill="#fff"/><path d="M240 135L310 90 380 135z" fill="#1d6bff"/><rect x="295" y="190" width="30" height="45" fill="#4aa8ff"/><circle cx="110" cy="130" r="20" fill="#8a5a3c"/><path d="M80 235V165a30 30 0 0160 0v70z" fill="#1d6bff"/><circle cx="175" cy="170" r="14" fill="#f2b48c"/><path d="M158 235v-40a17 17 0 0134 0v40z" fill="#ffb347"/><path d="M140 190l18 5" stroke="#8a5a3c" stroke-width="7" stroke-linecap="round"/>'];
+const sv=n=>`<svg class="sc" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${SC[n%4]}</svg>`;
+const pics=(a,b,c,x,y,z)=>`<div class="pics"><figure>${sv(a)}<figcaption>${x}</figcaption></figure><figure>${sv(b)}<figcaption>${y}</figcaption></figure><figure>${sv(c)}<figcaption>${z}</figcaption></figure></div>`;
+function init(){
+document.querySelectorAll('.card').forEach(c=>{const h=c.querySelector('h3');if(!h)return;const k=M[h.textContent.split(' · ')[0]];if(!k)return;let ic=c.querySelector('.ic');if(!ic){ic=document.createElement('div');ic.className='ic';c.prepend(ic)}ic.innerHTML=svg(k)});
+const A=['play','target','image','phone','bolt','chart'];
+document.querySelectorAll('.acc div').forEach((d,i)=>d.insertAdjacentHTML('afterbegin','<span class="ai">'+svg(A[i])+'</span>'));
+document.querySelectorAll('.contact a:not(.btn)').forEach(a=>{const h=a.getAttribute('href');a.insertAdjacentHTML('afterbegin',svg(h.startsWith('mailto')?'mail':h.startsWith('tel')?'phone':'chat'))});
+const v=document.querySelector('.vid');v.insertAdjacentHTML('afterbegin',sv(0));v.lastChild.nodeType===3&&(v.lastChild.textContent='');v.insertAdjacentHTML('beforeend','<span class="pb">'+svg('play')+'Featured school video</span>');
+const im=document.querySelector('.test .im');im.innerHTML=sv(1)+'<span>Facebook page: before and after NAVA</span>';
+document.querySelector('#v-home section.about').insertAdjacentHTML('beforebegin',pics(0,1,2,'Your school, seen','Real classroom life','Happy playtime'));
+document.querySelector('#v-parents section.about').insertAdjacentHTML('beforebegin',pics(1,2,3,'Classrooms you can see','Playgrounds shown','Parents on the school run'));
+document.querySelector('#v-schools section').insertAdjacentHTML('beforebegin',pics(3,0,1,'Parents choose on phones','Your school up front','Filled classrooms'));
+document.querySelector('#v-about section').insertAdjacentHTML('beforebegin',pics(0,3,2,'Schools we serve','Families we help','Pupils at play'))}
+init();addEventListener('hashchange',go);go();
+</script></body></html>
