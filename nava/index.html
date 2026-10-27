@@ -59,7 +59,8 @@ sec,section{display:block;padding:54px 0}
 .card h3{font:500 14px Inter,sans-serif;margin:30px 0 4px}.card p{font-size:12px;color:var(--mute)}
 .card.pop{border-color:var(--or)}
 .price{font:400 36px 'Instrument Serif',serif}
-.vid{background:linear-gradient(135deg,#a9d4ff,#5fd6e8);border-radius:16px;aspect-ratio:16/8;display:grid;place-items:center;color:#fff;font:italic 28px 'Instrument Serif',serif;margin-top:22px;text-align:center;padding:20px}
+.vid{background:linear-gradient(135deg,#a9d4ff,#5fd6e8);border-radius:16px;aspect-ratio:16/9;display:grid;place-items:center;color:#fff;font:italic 28px 'Instrument Serif',serif;margin-top:22px;text-align:center;padding:0;overflow:hidden;position:relative}
+.vid video,.vs video{width:100%;height:100%;object-fit:cover;display:block}
 .test{display:grid;grid-template-columns:1.1fr 1fr .8fr;gap:14px;margin-top:22px;align-items:stretch}
 .test .q{font-size:13px;align-self:center}
 .test .im{border-radius:12px;min-height:200px;background:linear-gradient(160deg,#5fa8e8,#0b1f6b);color:#fff;font-size:11px;padding:12px;display:flex;align-items:flex-end}
@@ -118,8 +119,8 @@ nav .in{position:relative;box-shadow:0 6px 24px rgba(232,104,26,.08)}nav .l{font
 .btn{font-size:15px}.btn.dk{font-size:13px}h1{font-size:clamp(40px,7vw,76px)}h2{font-size:clamp(34px,4.8vw,54px)}
 .hero p{font-size:19px}.pill,.tag{font-size:13px}.about .big{font-size:24px}.two{font-size:15px}.stats b{font-size:52px}.stats span{font-size:12px}
 .card h3{font-size:18px}.card p{font-size:15px}.acc div{font-size:16px}.acc div small{font-size:14px}.tl div{font-size:15px}.tl b{font-size:28px}.cmp{font-size:15px}details p{font-size:15px}summary{font-size:17px}.ck li{font-size:15px}
-.big2 span{font-size:15px}.test .q{font-size:16px}.test .n{font-size:13px}.price{font-size:44px}.ph{font-size:22px}.vis div{font-size:14px}.contact a{font-size:16px}.contact small{font-size:12px}
-input,select,textarea{font-size:16px}.foot{font-size:13px}.cta2 p{font-size:17px}section p[style]{font-size:16px!important}
+.big2 span{font-size:15px}.test .q{font-size:18px}.test .n{font-size:13px}.price{font-size:44px}.ph{font-size:22px}.vis div{font-size:14px}.contact a{font-size:16px}.contact small{font-size:12px}
+input,select,textarea{font-size:16px}.foot{font-size:13px}.cta2 p{font-size:17px}section p[style]{font-size:18px!important}
 .rv{opacity:0;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.rv.l{transform:translateX(-48px)}.rv.r{transform:translateX(48px)}.rv.in{opacity:1;transform:none}
 @media(max-width:980px){.grid3{grid-template-columns:1fr 1fr!important}.tl{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){nav{padding:10px 14px}nav .in{padding:6px 6px 6px 16px}.mb{display:grid}nav.open .l{display:flex;flex-direction:column;gap:2px;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border-radius:22px;padding:10px;box-shadow:0 18px 40px rgba(232,104,26,.18);font-size:17px}nav.open .l a{padding:14px 16px;border-radius:12px}nav.open .l a:hover,nav.open .l a.on{background:var(--card)}.hero{padding:40px 0 20px}.strip .ph{flex-basis:130px;height:160px}.strip .ph:nth-child(2n){height:130px}.about{gap:12px}.stats b{font-size:44px}.big2 b{font-size:56px}.cta2{padding:80px 20px}.cmp{display:block;overflow-x:auto}}
@@ -133,20 +134,20 @@ h1{font-size:clamp(44px,7.5vw,84px)}h2{font-size:clamp(38px,5.2vw,60px)}
 input,select,textarea{font-size:18px}.foot{font-size:15px}.cta2 p{font-size:19px}section p[style]{font-size:18px!important}
 .card .ic{width:52px;height:52px;border-radius:16px;font-size:0}.card .ic svg{width:26px;height:26px}
 .acc div{position:relative;padding-left:66px}.acc .ai{position:absolute;left:16px;top:15px;color:var(--or)}.acc .ai svg{width:26px;height:26px}
-.ph{position:relative;overflow:hidden;flex:0 0 190px;height:240px}.ph:nth-child(2n){height:190px}.ph .sc,.vid .sc,.test .im .sc{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ph span,.test .im span{position:relative;background:rgba(17,40,90,.6);padding:5px 12px;border-radius:99px;font:500 14px Inter,sans-serif;font-style:normal}
-.vid,.test .im{position:relative;overflow:hidden}.pb{position:relative;background:rgba(255,255,255,.93);color:var(--ink);font:500 19px Inter,sans-serif;padding:15px 24px;border-radius:99px;display:inline-flex;gap:10px;align-items:center}
-.pics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:50px 0}.pics figure{margin:0;border-radius:22px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--card)}.pics .sc{width:100%;height:100%;display:block;object-fit:cover}.pics figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.93);padding:7px 15px;border-radius:99px;font-size:16px;font-weight:500}
+.ph{position:relative;overflow:hidden;flex:0 0 190px;height:240px}.ph:nth-child(2n){height:190px}.ph .sc,.test .im .sc{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph span,.test .im span{position:relative;background:rgba(17,40,90,.6);padding:5px 12px;border-radius:99px;font:500 14px Inter,sans-serif;font-style:normal;z-index:2}
+.vid,.test .im{position:relative;overflow:hidden}.pb{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.93);color:var(--ink);font:500 19px Inter,sans-serif;padding:15px 24px;border-radius:99px;display:inline-flex;gap:10px;align-items:center;z-index:3;pointer-events:none}
+.pics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:50px 0}.pics figure{margin:0;border-radius:22px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--card)}.pics .sc{width:100%;height:100%;display:block;object-fit:cover}.pics figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.93);padding:7px 15px;border-radius:99px;font-size:16px;font-weight:500;z-index:2}
 .contact a svg{vertical-align:-5px;margin-right:10px;width:22px;height:22px}
 @media(max-width:760px){.strip .ph{flex-basis:150px;height:190px}.strip .ph:nth-child(2n){height:150px}.pics{grid-template-columns:1fr}.stats b{font-size:48px}.big2 b{font-size:60px}}
 .btn.nv{background:#0b1f6b}.btn.ol{border-color:#0b1f6b}
 .card{position:relative}.rec{position:absolute;top:-14px;right:16px;background:#e8681a;color:#fff;font:600 13px Inter,sans-serif;padding:5px 12px;border-radius:99px}.card.rec2{border:3px solid #2b5fd9}
 .card:nth-child(even) .ic{background:rgba(11,31,107,.12);color:#0b1f6b}
 .vids{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;text-align:left}.vp h3{font:500 20px Inter,sans-serif;margin:0}
-.vs{position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:var(--card)}.vs .sc{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.pl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;border:0;background:#e8681a;color:#fff;font-size:24px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.2);transition:all .3s}
+.vs{position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:var(--card)}.vs video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;border:0;background:#e8681a;color:#fff;font-size:24px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.2);transition:all .3s;z-index:3}
 .vp.play .pl{left:auto;right:12px;top:12px;transform:none;width:44px;height:44px;font-size:14px}
-.cap{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(11,31,107,.88);color:#fff;border-radius:12px;padding:10px 14px;font-size:15px;line-height:1.35}
+.cap{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(11,31,107,.88);color:#fff;border-radius:12px;padding:10px 14px;font-size:15px;line-height:1.35;z-index:2}
 .vb{height:5px;background:var(--line);border-radius:9px;margin:14px 0 10px;overflow:hidden}.pr{display:block;height:100%;width:0;background:#e8681a}.vp.play .pr{animation:prog 12s linear infinite}@keyframes prog{to{width:100%}}
 nav .l{gap:22px}
 @media(max-width:760px){.vids{grid-template-columns:1fr}}
@@ -247,20 +248,34 @@ const IC={play:'<path d="M8 5v14l11-7z"/>',target:'<circle cx="12" cy="12" r="9"
 const svg=k=>`<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[k]}</svg>`;
 const M={'Real footage':'play','Targeted ads':'target','5-minute replies':'phone','Clear pricing':'coin','Weekly reports':'chart','Local teams':'home','See before you visit':'play','Know the truth':'coin','Hear from other parents':'heart','For Businesses':'tag','For Parents':'heart','For Schools':'cap','Retail &':'tag','Retail & shops':'tag','Restaurants & hotels':'heart','Clinics & pharmacies':'check','Real estate':'home','Salons & beauty':'smile','Tech & startups':'bolt','Banks & SACCOs':'coin','NGOs & events':'pin','Honest':'check','Fast':'bolt','Local':'heart','Nursery':'smile','Primary':'book','Secondary':'flask','University':'cap','No fees shown':'tag','Blurry posters':'image','Slow replies':'clock','WhatsApp':'chat','Call':'phone','Email':'mail','Visit':'pin','Visibility':'image','Growth':'chart','Dominance':'bolt','For parents':'heart','For schools':'cap'};
 
-const sv=n=>`<img class="sc" src="image.jpg" alt="NAVA Illustration" />`;
+const imgs=['image.jpg','image2.jpg','image3.jpg','image4.jpg','image5.jpg','image6.jpg','image7.jpg','image8.jpg','image9.jpg'];
+const rndImg=()=>imgs[Math.floor(Math.random()*imgs.length)];
+const sv=n=>`<img class="sc" src="${rndImg()}" alt="NAVA Illustration" />`;
+const vidElem=()=>`<video class="sc" src="vid.mp4" poster="${rndImg()}" playsinline loop muted></video>`;
 
 const VC=[['A parent finishes work late and takes a boda to ask around.','Another area, another school, another blurry poster.','No fees. No location. Which school is good?','So the search starts all over again tomorrow.'],['The headteacher hands out flyers all weekend.','Posters go up. Banners go up. Admissions open.','But parents are scrolling on their phones, not walking past.','Zero calls today. Good school, empty desks.'],['NAVA films your real school life.','A parent comments "Fees?" and we reply in 5 minutes.','Saturday visit booked. Admission on Monday.','Classrooms fill. Parents are happy. Everyone wins.']];
 const VT=['Parents on the move','Headteachers marketing in vain','NAVA makes the match'];
-const vp=i=>`<div class="vp" data-i="${i}"><div class="vs">${sv(4+i)}<button class="pl" aria-label="Play video">▶</button><div class="cap">${VC[i][0]}</div></div><div class="vb"><i class="pr"></i></div><h3>${VT[i]}</h3></div>`;
+const vp=i=>`<div class="vp" data-i="${i}"><div class="vs">${vidElem()}<button class="pl" aria-label="Play video">▶</button><div class="cap">${VC[i][0]}</div></div><div class="vb"><i class="pr"></i></div><h3>${VT[i]}</h3></div>`;
 setInterval(()=>document.querySelectorAll('.vp.play').forEach(v=>{v._k=((v._k||0)+1)%4;v.querySelector('.cap').textContent=VC[v.dataset.i][v._k]}),3000);
-document.addEventListener('click',e=>{const b=e.target.closest('.pl');if(b){const v=b.closest('.vp');b.textContent=v.classList.toggle('play')?'❚❚':'▶'}});
+document.addEventListener('click',e=>{
+  const b=e.target.closest('.pl');
+  if(b){
+    const v=b.closest('.vp');
+    const media=v.querySelector('video');
+    const playing=v.classList.toggle('play');
+    b.textContent=playing?'❚❚':'▶';
+    if(media){ playing ? media.play() : media.pause(); }
+  }
+});
 const pics=(a,b,c,x,y,z)=>`<div class="pics"><figure>${sv(a)}<figcaption>${x}</figcaption></figure><figure>${sv(b)}<figcaption>${y}</figcaption></figure><figure>${sv(c)}<figcaption>${z}</figcaption></figure></div>`;
 function init(){
 document.querySelectorAll('.card').forEach(c=>{const h=c.querySelector('h3');if(!h)return;const k=M[h.textContent.split(' · ')[0]];if(!k)return;let ic=c.querySelector('.ic');if(!ic){ic=document.createElement('div');ic.className='ic';c.prepend(ic)}ic.innerHTML=svg(k)});
 const A=['play','target','image','phone','bolt','chart'];
 document.querySelectorAll('.acc div').forEach((d,i)=>d.insertAdjacentHTML('afterbegin','<span class="ai">'+svg(A[i])+'</span>'));
 document.querySelectorAll('.contact a:not(.btn)').forEach(a=>{const h=a.getAttribute('href');a.insertAdjacentHTML('afterbegin',svg(h.startsWith('mailto')?'mail':h.startsWith('tel')?'phone':'chat'))});
-document.querySelector('.vid').closest('section').insertAdjacentHTML('beforebegin','<section class="c"><div class="tag">Watch</div><h2>Watch the <i>story</i></h2><p style="color:var(--mute);margin-top:12px">Tap play. Parents search in vain, headteachers market in vain, then NAVA makes the match.</p><div class="vids">'+vp(0)+vp(1)+vp(2)+'</div></section>');const v=document.querySelector('.vid');v.insertAdjacentHTML('afterbegin',sv(0));v.lastChild.nodeType===3&&(v.lastChild.textContent='');v.insertAdjacentHTML('beforeend','<span class="pb">'+svg('play')+'Featured school video</span>');
+document.querySelector('.vis div img').src=rndImg();
+document.querySelector('.vid').closest('section').insertAdjacentHTML('beforebegin','<section class="c"><div class="tag">Watch</div><h2>Watch the <i>story</i></h2><p style="color:var(--mute);margin-top:12px">Tap play. Parents search in vain, headteachers market in vain, then NAVA makes the match.</p><div class="vids">'+vp(0)+vp(1)+vp(2)+'</div></section>');
+const v=document.querySelector('.vid');v.innerHTML='<video src="vid.mp4" poster="'+rndImg()+'" controls playsinline></video><span class="pb">'+svg('play')+'Featured school video</span>';
 const im=document.querySelector('.test .im');im.innerHTML=sv(1)+'<span>Facebook page: before and after NAVA</span>';
 document.querySelector('#v-home section.about').insertAdjacentHTML('beforebegin',pics(4,5,6,'Parents on the move','Headteachers marketing in vain','NAVA makes the match'));
 document.querySelector('#v-parents section.about').insertAdjacentHTML('beforebegin',pics(1,2,3,'Classrooms you can see','Playgrounds shown','Parents on the school run'));
