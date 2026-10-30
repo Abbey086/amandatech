@@ -29,7 +29,7 @@ nav .l a.on{color:var(--or)}
 .pill{display:inline-block;background:rgba(255,255,255,.7);color:#111;border-radius:99px;padding:5px 14px;font-size:11px;font-weight:500;margin-bottom:22px}
 .hero p{max-width:560px;margin:18px auto 24px;color:var(--mute)}
 .hero .b{display:flex;gap:10px;justify-content:center;flex-wrap:wrap; padding:0 12px}
-.strip{display:flex;gap:14px;justify-content:center;margin-top:40px;overflow:hidden;align-items:flex-end}
+.strip{display:flex;gap:14px;justify-content:center;margin-top:40px;overflow:scro;align-items:flex-end}
 .ph{flex:0 0 150px;height:190px;border-radius:14px;color:#fff;font:italic 20px 'Instrument Serif',serif;padding:14px;display:flex;align-items:flex-end;text-align:left;line-height:1.1}
 .ph:nth-child(2n){height:150px}
 .logos{display:flex;justify-content:center;gap:clamp(18px,5vw,56px);flex-wrap:wrap;padding:36px 0;color:var(--mute);font-weight:600;font-size:14px}
@@ -49,9 +49,9 @@ sec,section{display:block;padding:54px 0}
 .acc{display:flex;flex-direction:column;gap:6px}
 .acc div{background:var(--card);border-radius:10px;padding:12px 14px;font-size:13px;font-weight:500}
 .acc div.o{padding:16px 14px}.acc div small{display:block;color:var(--mute);font-weight:400;margin-top:6px;font-size:12px}
-.vis{border-radius:14px;min-height:260px; height: 500px;background:linear-gradient(135deg,#7ab6ff,#46d0e6 60%,#e8681a);display:grid;place-items:center;padding:20px}
+.vis{border-radius:14px;min-height:500px;background:linear-gradient(135deg,#7ab6ff,#46d0e6 60%,#e8681a);display:grid;place-items:center;padding:20px}
 .vis div{background:#fff;color:#111;border-radius:10px;padding:16px;width:78%;font-size:12px;font-weight:600}
-.vis img{width:100%;margin-top:8px;object-fit:cover;border-radius:6px}
+.vis img{width:100%;height:70px;margin-top:8px;object-fit:cover;border-radius:6px}
 .c{text-align:center}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;min-height:170px;display:flex;flex-direction:column;justify-content:flex-end;text-align:left}
@@ -126,6 +126,9 @@ input,select,textarea{font-size:16px}.foot{font-size:13px}.cta2 p{font-size:17px
 @media(max-width:760px){nav{padding:10px 14px}nav .in{padding:6px 6px 6px 16px}.mb{display:grid}nav.open .l{display:flex;flex-direction:column;gap:2px;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border-radius:22px;padding:10px;box-shadow:0 18px 40px rgba(232,104,26,.18);font-size:17px}nav.open .l a{padding:14px 16px;border-radius:12px}nav.open .l a:hover,nav.open .l a.on{background:var(--card)}.hero{padding:40px 0 20px}.strip .ph{flex-basis:130px;height:160px}.strip .ph:nth-child(2n){height:130px}.about{gap:12px}.stats b{font-size:44px}.big2 b{font-size:56px}.cta2{padding:80px 20px}.cmp{display:block;overflow-x:auto}}
 @media(max-width:560px){.grid3,.tl{grid-template-columns:1fr!important}form{grid-template-columns:1fr}.hero .b .btn{width:100%;text-align:center}.big2{grid-template-columns:1fr}.btn.dk{padding:9px 12px}}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+.gallery{margin:46px 0;position:relative}.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:22px;background:var(--card);aspect-ratio:16/9}.gallery img{width:100%;height:100%;object-fit:cover;display:block}.gallery figcaption{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.94);padding:8px 15px;border-radius:99px;font-size:15px;font-weight:600;color:var(--ink)}.gallery-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px}.gallery-controls button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:50%;width:42px;height:42px;font-size:22px;cursor:pointer}.gallery-count{font-size:13px;color:var(--mute);min-width:54px;text-align:center}.gallery-dots{display:flex;gap:7px}.gallery-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#b8c9d5;cursor:pointer}.gallery-dots button[aria-current=true]{background:var(--or)}
+@media(max-width:760px){.gallery figure{aspect-ratio:4/3}}
+
 body{font-size:19px}nav .l{font-size:16px}.btn{font-size:17px}.btn.dk{font-size:14px}
 h1{font-size:clamp(44px,7.5vw,84px)}h2{font-size:clamp(38px,5.2vw,60px)}
 .hero p{font-size:21px}.pill,.tag{font-size:14px}.about .big{font-size:27px}.two{font-size:17px}.stats b{font-size:58px}.stats span{font-size:13px}
@@ -135,7 +138,7 @@ input,select,textarea{font-size:18px}.foot{font-size:15px}.cta2 p{font-size:19px
 .card .ic{width:52px;height:52px;border-radius:16px;font-size:0}.card .ic svg{width:26px;height:26px}
 .acc div{position:relative;padding-left:66px}.acc .ai{position:absolute;left:16px;top:-15px;color:var(--or)}.acc .ai svg{width:26px;height:26px}
 .ph{position:relative;overflow:hidden;flex:0 0 190px;height:240px}.ph:nth-child(2n){height:190px}.ph .sc,.test .im .sc{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ph span,.test .im span{position:relative;background:rgba(17,40,90,.6);padding:5px 12px;border-radius:99px;font:500 14px Inter,sans-serif;font-style:normal;z-index:2}
+.ph span {display:none;}.test .im span{position:relative;background:rgba(17,40,90,.6);padding:5px 12px;border-radius:99px;font:500 14px Inter,sans-serif;font-style:normal;z-index:2}
 .vid,.test .im{position:relative;overflow:hidden}.pb{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.93);color:var(--ink);font:500 19px Inter,sans-serif;padding:15px 24px;border-radius:99px;display:inline-flex;gap:10px;align-items:center;z-index:3;pointer-events:none}
 .pics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:50px 0}.pics figure{margin:0;border-radius:22px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--card)}.pics .sc{width:100%;height:100%;display:block;object-fit:cover}.pics figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.93);padding:7px 15px;border-radius:99px;font-size:16px;font-weight:500;z-index:2}
 .contact a svg{vertical-align:-5px;margin-right:10px;width:22px;height:22px}
@@ -248,26 +251,27 @@ const IC={play:'<path d="M8 5v14l11-7z"/>',target:'<circle cx="12" cy="12" r="9"
 const svg=k=>`<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[k]}</svg>`;
 const M={'Real footage':'play','Targeted ads':'target','5-minute replies':'phone','Clear pricing':'coin','Weekly reports':'chart','Local teams':'home','See before you visit':'play','Know the truth':'coin','Hear from other parents':'heart','For Businesses':'tag','For Parents':'heart','For Schools':'cap','Retail &':'tag','Retail & shops':'tag','Restaurants & hotels':'heart','Clinics & pharmacies':'check','Real estate':'home','Salons & beauty':'smile','Tech & startups':'bolt','Banks & SACCOs':'coin','NGOs & events':'pin','Honest':'check','Fast':'bolt','Local':'heart','Nursery':'smile','Primary':'book','Secondary':'flask','University':'cap','No fees shown':'tag','Blurry posters':'image','Slow replies':'clock','WhatsApp':'chat','Call':'phone','Email':'mail','Visit':'pin','Visibility':'image','Growth':'chart','Dominance':'bolt','For parents':'heart','For schools':'cap'};
 
-const imgs=['image.jpg','image2.jpg','image3.jpg','image4.jpg','image5.jpg','image6.jpg','image7.jpg','image8.jpg','image9.jpg'];
-const rndImg=()=>imgs[Math.floor(Math.random()*imgs.length)];
-const sv=n=>`<img class="sc" src="${rndImg()}" alt="NAVA Illustration" />`;
-const vidElem=()=>`<video class="sc" src="vid.mp4" poster="${rndImg()}" playsinline loop muted></video>`;
+const photoGroups={
+ customers:['customers1.jpg','customers2.jpg','customers3.jpg','customers4.jpg'],
+ brands:['brands1.jpg','brands2.jpg','brands3.jpg','brands4.jpg'],
+ shops:['shops1.jpg','shops2.jpg','shops3.jpg','shops4.jpg'],
+ phones:['phones1.jpg','phones2.jpg','phones3.jpg','phones4.jpg'],
+ classroom:['classroom1.jpg','classroom2.jpg','classroom3.jpg','classroom4.jpg'],
+ playgrounds:['playgrounds1.jpg','playgrounds2.jpg','playgrounds3.jpg','playgrounds4.jpg'],
+ schoolrun:['schoolrun1.jpg','schoolrun2.jpg','schoolrun3.jpg','schoolrun4.jpg'],
+ about:['about1.jpg','about2.jpg','about3.jpg','about4.jpg']
+};
+const rndImg=()=>photoGroups.about[0];
+const sv=n=>`<img class="sc" src="${[...photoGroups.about, ...photoGroups.brands][n%8]}" alt="NAVA photography" />`;
+const vidElem=()=>`<video class="sc" src="vid.mp4" playsinline loop controls></video>`;
+const gallery=(key,label)=>`<div class="gallery" data-gallery="${key}" data-label="${label}"><figure><img src="${photoGroups[key][0]}" alt="${label}" loading="lazy"><figcaption>${label}</figcaption></figure><div class="gallery-controls"><button type="button" class="prev" aria-label="Previous photo">‹</button><span class="gallery-count">1 / 4</span><div class="gallery-dots">${photoGroups[key].map((_,i)=>`<button type="button" data-index="${i}" aria-label="Show photo ${i+1}" aria-current="${i===0}"></button>`).join('')}</div><button type="button" class="next" aria-label="Next photo">›</button></div></div>`;
 
 const VC=[['A parent finishes work late and takes a boda to ask around.','Another area, another school, another blurry poster.','No fees. No location. Which school is good?','So the search starts all over again tomorrow.'],['The headteacher hands out flyers all weekend.','Posters go up. Banners go up. Admissions open.','But parents are scrolling on their phones, not walking past.','Zero calls today. Good school, empty desks.'],['NAVA films your real school life.','A parent comments "Fees?" and we reply in 5 minutes.','Saturday visit booked. Admission on Monday.','Classrooms fill. Parents are happy. Everyone wins.']];
 const VT=['Parents on the move','Headteachers marketing in vain','NAVA makes the match'];
-const vp=i=>`<div class="vp" data-i="${i}"><div class="vs">${vidElem()}<button class="pl" aria-label="Play video">▶</button><div class="cap">${VC[i][0]}</div></div><div class="vb"><i class="pr"></i></div><h3>${VT[i]}</h3></div>`;
+const vp=i=>`<div class="vp" data-i="${i}"><div class="vs">${vidElem()}<div class="cap">${VC[i][0]}</div></div><div class="vb"><i class="pr"></i></div><h3>${VT[i]}</h3></div>`;
 setInterval(()=>document.querySelectorAll('.vp.play').forEach(v=>{v._k=((v._k||0)+1)%4;v.querySelector('.cap').textContent=VC[v.dataset.i][v._k]}),3000);
-document.addEventListener('click',e=>{
-  const b=e.target.closest('.pl');
-  if(b){
-    const v=b.closest('.vp');
-    const media=v.querySelector('video');
-    const playing=v.classList.toggle('play');
-    b.textContent=playing?'❚❚':'▶';
-    if(media){ playing ? media.play() : media.pause(); }
-  }
-});
-const pics=(a,b,c,x,y,z)=>`<div class="pics"><figure>${sv(a)}<figcaption>${x}</figcaption></figure><figure>${sv(b)}<figcaption>${y}</figcaption></figure><figure>${sv(c)}<figcaption>${z}</figcaption></figure></div>`;
+
+
 function init(){
 document.querySelectorAll('.card').forEach(c=>{const h=c.querySelector('h3');if(!h)return;const k=M[h.textContent.split(' · ')[0]];if(!k)return;let ic=c.querySelector('.ic');if(!ic){ic=document.createElement('div');ic.className='ic';c.prepend(ic)}ic.innerHTML=svg(k)});
 const A=['play','target','image','phone','bolt','chart'];
@@ -275,11 +279,27 @@ document.querySelectorAll('.acc div').forEach((d,i)=>d.insertAdjacentHTML('after
 document.querySelectorAll('.contact a:not(.btn)').forEach(a=>{const h=a.getAttribute('href');a.insertAdjacentHTML('afterbegin',svg(h.startsWith('mailto')?'mail':h.startsWith('tel')?'phone':'chat'))});
 document.querySelector('.vis div img').src=rndImg();
 document.querySelector('.vid').closest('section').insertAdjacentHTML('beforebegin','<section class="c"><div class="tag">Watch</div><h2>Watch the <i>story</i></h2><p style="color:var(--mute);margin-top:12px">Tap play. Parents search in vain, headteachers market in vain, then NAVA makes the match.</p><div class="vids">'+vp(0)+vp(1)+vp(2)+'</div></section>');
-const v=document.querySelector('.vid');v.innerHTML='<video src="vid.mp4" poster="'+rndImg()+'" controls playsinline></video><span class="pb">'+svg('play')+'Featured school video</span>';
+const v=document.querySelector('.vid');v.innerHTML='<video src="vid.mp4" controls playsinline></video>';
 const im=document.querySelector('.test .im');im.innerHTML=sv(1)+'<span>Facebook page: before and after NAVA</span>';
-document.querySelector('#v-home section.about').insertAdjacentHTML('beforebegin',pics(4,5,6,'Parents on the move','Headteachers marketing in vain','NAVA makes the match'));
-document.querySelector('#v-parents section.about').insertAdjacentHTML('beforebegin',pics(1,2,3,'Classrooms you can see','Playgrounds shown','Parents on the school run'));
-document.querySelector('#v-schools section').insertAdjacentHTML('beforebegin',pics(3,0,1,'Parents choose on phones','Your school up front','Filled classrooms'));
-document.querySelector('#v-business section').insertAdjacentHTML('beforebegin',pics(7,6,5,'Shops and retail','Customers who ask first','Brands that get found'));document.querySelector('#v-about section').insertAdjacentHTML('beforebegin',pics(0,3,2,'Schools we serve','Families we help','Pupils at play'))}
+document.querySelector('#v-business section').insertAdjacentHTML('beforebegin',gallery('customers','Customers who ask first')+gallery('brands','Brands that get found')+gallery('shops','Shops and retail'));
+document.querySelector('#v-schools section').insertAdjacentHTML('beforebegin',gallery('phones','Parents choose on phones')+gallery('classroom','Filled classrooms'));
+document.querySelector('#v-parents section.about').insertAdjacentHTML('beforebegin',gallery('playgrounds','Playgrounds shown')+gallery('schoolrun','Parents on the school run'));
+document.querySelector('#v-about section').insertAdjacentHTML('beforebegin',gallery('about','About'));
+document.querySelectorAll('video').forEach(video=>{video.removeAttribute('poster');video.removeAttribute('muted');video.muted=false;video.controls=true});
+document.querySelectorAll('.gallery').forEach(g=>{
+  let index=0;
+  const key=g.dataset.gallery,files=photoGroups[key],img=g.querySelector('img'),count=g.querySelector('.gallery-count'),dots=[...g.querySelectorAll('.gallery-dots button')];
+  const show=n=>{index=(n+files.length)%files.length;img.src=files[index];count.textContent=`${index+1} / ${files.length}`;dots.forEach((d,i)=>d.setAttribute('aria-current',String(i===index)))};
+  
+  let timer = setInterval(()=>show(index+1), 3500);
+  const resetTimer = () => { clearInterval(timer); timer = setInterval(()=>show(index+1), 3500); };
+  
+  g.addEventListener('mouseenter', () => clearInterval(timer));
+  g.addEventListener('mouseleave', resetTimer);
+  
+  g.querySelector('.prev').addEventListener('click', ()=>{ show(index-1); resetTimer(); });
+  g.querySelector('.next').addEventListener('click', ()=>{ show(index+1); resetTimer(); });
+  dots.forEach(d=>d.addEventListener('click', ()=>{ show(Number(d.dataset.index)); resetTimer(); }));
+});}
 init();addEventListener('hashchange',go);go();
 </script></body></html>
